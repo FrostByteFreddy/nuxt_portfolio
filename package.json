@@ -6,16 +6,18 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "build:css": "node-sass --output-style compressed assets/scss/main.scss assets/compiled/styles.min.css"
   },
   "dependencies": {
+    "@nuxtjs/style-resources": "^1.2.2",
     "bootstrap": "^4.6.2",
     "bootstrap-vue": "^2.22.0",
     "core-js": "^3.25.3",
+    "node-sass": "^9.0.0",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
-  },
-  "devDependencies": {}
+  }
 }
