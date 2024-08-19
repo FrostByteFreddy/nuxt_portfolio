@@ -22,12 +22,6 @@ export default {
   css: [
   ],
 
-  styleResources: {
-    scss: [
-      '~/assets/scss/main.scss'
-    ],
-  },
-
   plugins: [
   ],
 
@@ -37,7 +31,6 @@ export default {
   ],
 
   modules: [
-    'bootstrap-vue/nuxt',
     '@nuxtjs/style-resources',
   ],
 

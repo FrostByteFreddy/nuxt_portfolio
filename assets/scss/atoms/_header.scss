@@ -1,0 +1,49 @@
+///////////////////////////////////////////////
+// Navigation Wrapper <header>
+///////////////////////////////////////////////
+
+header {
+
+    // Desktop
+    height: $header-heightDesktopMaximized;
+    transition: height $header-heightTransitionSpeed ease-out, top $header-heightTransitionSpeed ease-out;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    // Background Color / Box Shadow
+    background-color: $navbar-backgroundColor;
+    box-shadow: $navbar-boxShadowBottom;
+
+    // Minimized state Desktop
+    &[data-state="minimized"] {
+
+        @if $header-hideOnScroll == 'yes' {
+
+            top: -$header-heightDesktopMaximized;
+        } @else {
+
+            height: $header-heightDesktopMinimized;
+        }
+    }
+
+    // Mobile
+    @include below('md') {
+
+        height: $header-heightMobileMaximized;
+        top: 0;
+
+        // Minimized state Mobile
+        &[data-state="minimized"] {
+
+            @if $header-hideOnScroll == 'yes' {
+
+                top: -$header-heightMobileMaximized;
+            } @else {
+
+                height: $header-heightMobileMinimized;
+            }
+        }
+    }
+}

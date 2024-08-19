@@ -1,6 +1,9 @@
 body {
 
-    margin: 0;
-    padding: 0;
+    font-family: $ff-main;
     box-sizing: border-box;
+    margin: 0;
+    background-color: $body-backgroundColor;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }

@@ -1,8 +1,10 @@
 <template>
-  <nav>
-    <DesktopNavbar :links="links" />
-    <MobileNavbar :links="links" />
-  </nav>
+  <header>
+    <nav class="container">
+      <DesktopNavbar :links="links" />
+      <MobileNavbar :links="links" />
+    </nav>
+  </header>
 </template>
 
 <script>

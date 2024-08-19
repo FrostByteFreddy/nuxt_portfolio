@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "build:css": "node-sass --output-style compressed assets/scss/main.scss assets/compiled/styles.min.css"
+    "build:css": "sass assets/scss/main.scss assets/compiled/styles.min.css"
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.2.2",
@@ -19,5 +19,8 @@
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "sass": "^1.77.6"
   }
 }

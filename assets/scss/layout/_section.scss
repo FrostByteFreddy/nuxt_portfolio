@@ -1,0 +1,24 @@
+///////////////////////////////////////////////
+// Section
+///////////////////////////////////////////////
+
+section {
+
+    // Space Before
+    @each $name, $size in $vertical-spacing {
+
+        &.space-before-#{$name} {
+
+            padding-top: $size;
+        }
+    }
+
+    // Space After
+    @each $name, $size in $vertical-spacing {
+
+        &.space-after-#{$name} {
+
+            padding-bottom: $size;
+        }
+    }
+}

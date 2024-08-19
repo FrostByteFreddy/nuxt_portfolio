@@ -1,23 +1,18 @@
 <template>
-  <div id="nav-desktop">
-    <div class="container">
-      <div class="navbar-logo">
-        <img src="~/static/images/logo.png" />
-      </div>
-      <div class="navbar-links">
-        <ul class="navbar-nav">
-          <li v-for="link in links" :key="link.name" class="nav-item">
-            <nuxt-link
-              :to="link.to"
-              class="nav-link"
-              exact-active-class="active"
-            >
-              {{ link.name }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <div data-device="desktop">
+    <a href="/" class="nav-logo">
+      <img class="nav-logo-img" src="~/static/images/logo_example.svg" />
+    </a>
+    <ul class="nav-menu-links">
+      <li v-for="link in links" :key="link.name" class="nav-menu-link">
+        <nuxt-link
+          :to="link.to"
+          exact-active-class="active"
+        >
+          {{ link.name }}
+        </nuxt-link>
+      </li>
+    </ul>
   </div>
 </template>
 

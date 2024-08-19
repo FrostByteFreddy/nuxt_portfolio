@@ -1,16 +1,44 @@
+///////////////////////////////////////////////
+// Navigation <nav>
+///////////////////////////////////////////////
+
 nav {
 
-	.nav {
+    height: 100%;
+    width: $container-maxWidthDesktop;
 
-		&-desktop {
+    @include below('xl') {
+        
+        width: $container-maxWidthMobile;
+    }
 
-			display: flex;
-			justify-content: space-between;
-		}
+    // Desktop & Mobile Nav
+    [data-device="desktop"],
+    [data-device="mobile"] {
 
-		&-mobile {
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        height: 100%;
+    }
 
+    [data-device="desktop"] {
 
-		}
-	}
+        display: flex;
+
+        @include below($navbar-burgerMenuBreakpoint) {
+
+            display: none;
+        }
+    }
+
+    [data-device="mobile"] {
+        
+        display: none;
+
+        @include below($navbar-burgerMenuBreakpoint) {
+
+            display: flex;
+        }
+    }
 }
