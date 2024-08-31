@@ -1,31 +1,33 @@
 <template>
-  <footer class="bg-light py-5">
+  <footer class="background-primary-light space-before-large space-after-large">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h3>Footer</h3>
-          <p>Your company information, address, etc. can go here.</p>
+      <div class="row gy-2 gx-5">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+          <div class="row">
+            <div class="col-md-8 col-12">
+              <h3>Footer</h3> 
+              <p>Your company information, address, etc. can go here.</p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-3">
-          <h4>Links</h4>
-          <ul class="list-unstyled">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#" class="text-white">Home</a></li>
+            <li><a href="#" class="text-white">About</a></li>
+            <li><a href="#" class="text-white">Services</a></li>
+            <li><a href="#" class="text-white">Contact</a></li>
           </ul>
         </div>
-        <div class="col-md-3">
-          <h4>Social</h4>
-          <ul class="list-unstyled">
-            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <h3>Social</h3> 
+          <ul class="list-unstyled"> 
+            <li><a href="#" class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="#" class="text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="#" class="text-white"><i class="fab fa-instagram"></i> Instagram</a></li>
           </ul>
         </div>
       </div>
-      <hr>
-      <p class="text-center">&copy; 2023 Your Company</p>
     </div>
   </footer>
 </template>

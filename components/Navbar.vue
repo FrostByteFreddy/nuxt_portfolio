@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header data-state="maximized">
     <nav class="container">
       <DesktopNavbar :links="links" />
       <MobileNavbar :links="links" />

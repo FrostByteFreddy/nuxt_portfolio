@@ -7,14 +7,14 @@ $clr-white: #ffffff;
 $clr-transparent: transparent;
 
 // Colors (prefix clr)
-$clr-primary: #9d1456; 
+$clr-primary:   #9d1456; 
 $clr-secondary: #CD9E67; 
-$clr-tertiary: #67CD9E;  
-$clr-quaternary: #679ECD;
-$clr-quinary: #2c0053; 
+$clr-tertiary:  #67CD9E;  
+$clr-quaternary:#679ECD;
+$clr-quinary:   #2c0053; 
 
 // Lighter shades (might result in white if the percentage is too hight)
-$clr-primaryLight: lighten($clr-primary, 20%);
+$clr-primaryLight: lighten($clr-primary, 50%);
 $clr-secondaryLight: lighten($clr-secondary, 20%);
 $clr-tertiaryLight: lighten($clr-tertiary, 20%);
 $clr-quaternaryLight: lighten($clr-quaternary, 20%);
