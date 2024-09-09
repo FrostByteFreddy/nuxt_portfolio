@@ -15,6 +15,14 @@ export default {
     ]
   },
 
+  // watch and render scss
+  hooks: {
+    'build:done' () {
+      const { spawn } = require('child_process');
+      spawn('npm', ['run', 'watch:scss'], { stdio: 'inherit' }); 
+    }
+  },
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },

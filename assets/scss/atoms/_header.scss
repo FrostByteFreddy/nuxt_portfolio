@@ -6,22 +6,29 @@ header {
 
     // Desktop
     height: $header-heightDesktopMaximized;
-    transition: height $header-heightTransitionSpeed ease-out, top $header-heightTransitionSpeed ease-out;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1000;
 
+    transition: height calc(#{$header-heightTransitionSpeed} / 2) ease, transform calc(#{$header-heightTransitionSpeed} / 2) ease, opacity calc(#{$header-heightTransitionSpeed} / 2) ease;
+
+    transform: translateY(0);
+    opacity: 1;
+
     // Background Color / Box Shadow
-    background-color: $navbar-backgroundColor;
+    background: $navbar-backgroundColor;
     box-shadow: $navbar-boxShadowBottom;
 
     // Minimized state Desktop
     &[data-state="minimized"] {
 
-        @if $header-hideOnScroll == 'yes' {
+        transition: height $header-heightTransitionSpeed ease, transform $header-heightTransitionSpeed ease, opacity calc(#{$header-heightTransitionSpeed} / 2) ease;
 
-            top: -$header-heightDesktopMaximized;
+        @if $header-hideOnScroll {
+
+            transform: translateY(-100%);
+            opacity: 0;
         } @else {
 
             height: $header-heightDesktopMinimized;
@@ -37,9 +44,12 @@ header {
         // Minimized state Mobile
         &[data-state="minimized"] {
 
-            @if $header-hideOnScroll == 'yes' {
+            transition: height $header-heightTransitionSpeed ease, transform $header-heightTransitionSpeed ease, opacity calc(#{$header-heightTransitionSpeed} / 2) ease;
 
-                top: -$header-heightMobileMaximized;
+            @if $header-hideOnScroll {
+
+                transform: translateY(-100%);
+                opacity: 0;
             } @else {
 
                 height: $header-heightMobileMinimized;

@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "build:css": "sass assets/scss/main.scss assets/compiled/styles.min.css"
+    "watch:scss": "node-sass --watch assets/scss/main.scss -o assets/compiled --output-style compressed"
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.2.2",

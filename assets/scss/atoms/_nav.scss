@@ -40,5 +40,14 @@ nav {
 
             display: flex;
         }
+
+        // Menu open on mobile
+        &.active {
+
+            .nav-menu-links-mobile {
+
+                max-height: calc(100vh - #{$header-heightMobileMaximized});
+            }
+        }
     }
 }

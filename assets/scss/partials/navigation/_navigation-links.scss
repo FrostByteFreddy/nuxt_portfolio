@@ -1,5 +1,6 @@
 .nav-menu {
 
+    
     // Desktop
     &-links {
 
@@ -27,6 +28,13 @@
                 // Add a bit of top offset to center it correctly
                 position: relative;
                 top: 2px;
+                transition: $transition-fast opacity ease-in-out;
+
+                // Current link
+                &.current {
+
+                    opacity: .7;
+                }
             }
 
             // Call to Action
@@ -39,6 +47,17 @@
 
     &-links-mobile {
 
-        display: none;
+        position: absolute;
+        top: $header-heightMobileMaximized;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+
+        transition: max-height $transition-medium ease-in-out;
+        max-height: 0;
+        height: 100vh;
+
+        background-color: $navbar-mobile-backgroundColor;
     }
 }

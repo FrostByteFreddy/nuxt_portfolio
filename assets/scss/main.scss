@@ -1,3 +1,6 @@
+// Nuxt transitions
+@import 'toolbox/nuxt-transitions';
+
 ///////////////////////////////////////////////
 // Base
 ///////////////////////////////////////////////
@@ -36,6 +39,7 @@
 @import 'atoms/body';
 @import 'atoms/button';
 @import 'atoms/code';
+@import 'atoms/footer';
 @import 'atoms/header';
 @import 'atoms/hr';
 @import 'atoms/html';
@@ -59,19 +63,17 @@
 
 
 ///////////////////////////////////////////////
-// Molecules
+// Partials
 ///////////////////////////////////////////////
 
-@import 'molecules/navigation-links';
-@import 'molecules/navigation-logo';
-@import 'molecules/burger-menu';
+@import 'partials/navigation/navigation-links';
+@import 'partials/navigation/navigation-logo';
+@import 'partials/navigation/burger-menu';
 
 
 ///////////////////////////////////////////////
 // Organisms
 ///////////////////////////////////////////////
-
-@import 'organisms/hero-slide';
 
 
 ///////////////////////////////////////////////

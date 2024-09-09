@@ -1,3 +1,18 @@
 <template>
-  <h1>Experience</h1>
+    <HeroSimple 
+        title="Experience" 
+        buttonText="Learn More" 
+        buttonUrl="/about" 
+    />
 </template>
+
+<script>
+
+import HeroSimple from '../contentelements/Hero/HeroSimple.vue'
+
+export default {
+    components: {
+        HeroSimple,
+    },
+};
+</script>

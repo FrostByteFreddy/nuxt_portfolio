@@ -7,18 +7,16 @@ $clr-white: #ffffff;
 $clr-transparent: transparent;
 
 // Colors (prefix clr)
-$clr-primary:   #9d1456; 
-$clr-secondary: #CD9E67; 
-$clr-tertiary:  #67CD9E;  
-$clr-quaternary:#679ECD;
-$clr-quinary:   #2c0053; 
+$clr-primary:   #007bff; 
+$clr-secondary: #6f42c1; 
+$clr-tertiary:  #ffd700; 
+
+$clr-gradient-blue-purple: linear-gradient(to right, $clr-primary, $clr-secondary);
 
 // Lighter shades (might result in white if the percentage is too hight)
-$clr-primaryLight: lighten($clr-primary, 50%);
+$clr-primaryLight: lighten($clr-primary, 30%); // Adjust percentage for desired lightness
 $clr-secondaryLight: lighten($clr-secondary, 20%);
 $clr-tertiaryLight: lighten($clr-tertiary, 20%);
-$clr-quaternaryLight: lighten($clr-quaternary, 20%);
-$clr-quinaryLight: lighten($clr-quinary, 20%);
 
 // Font-Families (prefix ff)
 $ff-main: 'Montserrat';
@@ -26,7 +24,8 @@ $ff-secondary: 'Raleway';
 $ff-fontawesome: 'Fontawesome 5';
 
 // Background-Color for body
-$body-backgroundColor: $clr-white;
+$body-backgroundColor: $clr-secondary;
+ 
 
 ///////////////////////////////////////////////
 // Layout related
@@ -79,14 +78,10 @@ $colors: (
   'primary': $clr-primary,
   'secondary': $clr-secondary,
   'tertiary': $clr-tertiary,
-  'quaternary': $clr-quaternary,
-  'quinary': $clr-quinary,
 
   'primary-light': $clr-primaryLight,
   'secondary-light': $clr-secondaryLight,
   'tertiary-light': $clr-tertiaryLight,
-  'quaternary-light': $clr-quaternaryLight,
-  'quinary-light': $clr-quinaryLight
 );
 
 // Containers
@@ -98,7 +93,9 @@ $container-maxWidthMobile: calc(100vw - 2 * #{$container-padding});
 $section-heroVerticalPadding: 40px;
 $section-heroHeight: 100svh;
 
-$section-heroTextColor: $clr-quinary;
+
+// $section-heroTextColor: $clr-quinary;
+$section-heroTextColor: $clr-tertiary;
 
 $section-heroBackgroundImageOverlayColor: $clr-white;
 $section-heroBackgroundImageOverlayopacity: .3;
@@ -114,28 +111,28 @@ $headings-marginTop: 2rem;
 $headings-marginBottom: 1rem;
 
 // Heading 1
-$h1-color: $clr-quinaryLight;
+$h1-color: $clr-tertiary;
 $h1-fontSize: 3.375rem;
 $h1-fontWeight: bold;
 $h1-lineHeight: $headings-lineHeight;
 $h1-fontFamily: $ff-main;
 
 // Heading 2
-$h2-color: $clr-quinary;
+$h2-color: $clr-primary;
 $h2-fontSize: 2.625rem;
 $h2-fontWeight: normal;
 $h2-lineHeight: $headings-lineHeight;
 $h2-fontFamily: $ff-main;
 
 // Heading 3
-$h3-color: $clr-quinaryLight;
+$h3-color: $clr-tertiary;
 $h3-fontSize: 1.875rem;
 $h3-fontWeight: bold;
 $h3-lineHeight: $headings-lineHeight;
 $h3-fontFamily: $ff-main;
 
 // Heading 4
-$h4-color: $clr-quinary;
+$h4-color: $clr-primaryLight;
 $h4-fontSize: 1.65rem;
 $h4-fontWeight: normal;
 $h4-lineHeight: $headings-lineHeight;
@@ -156,7 +153,8 @@ $transition-long: 500ms;
 ///////////////////////////////////////////////
 
 // Paragraphs (prefix p)
-$p-color: $clr-black;
+$p-color: $clr-white;
+ 
 $p-fontSize: 1rem; // 16px
 $p-lineHeight: 1.5;
 $p-fontWeight: normal;
@@ -165,15 +163,17 @@ $p-consecutiveMarginTop: 1rem; // p + p
 
 $p-lead-fontSize: calc(#{$p-fontSize * 1.75});
 $p-lead-fontWeight: normal;
-$p-lead-color: $clr-quinary;
+$p-lead-color: $clr-primary;
+
+$p-lead-color: $clr-tertiary;
 
 // Buttons (prefix btn)
 $btn-default-fontSize: 1rem; // 16px
 $btn-default-lineHeight: 1;
 $btn-default-fontWeight: 500;
 $btn-default-padding: .85rem 1.5rem;
-$btn-default-color: $clr-black;
-$btn-default-backgroundColor: $clr-tertiary; 
+$btn-default-color: $clr-white;
+$btn-default-backgroundColor: $clr-primary; 
 
 $btn-default-paddingWithButtonIcon: 3.5rem;
 $btn-default-transition: color $transition-fast, background-color $transition-fast;
@@ -185,24 +185,22 @@ $btn-primary-backgroundColor: $clr-primary;
 // ....
 
 // Secondary Button
-$btn-secondary-color: $clr-white;
+$btn-secondary-color:$clr-tertiary;
 $btn-secondary-backgroundColor: $clr-secondary;
 // ....
 
 // Tertiary Button
 $btn-tertiary-color: $clr-white;
-$btn-tertiary-backgroundColor: $clr-quinary;
+$btn-tertiary-backgroundColor: $clr-secondary;
 // ....
-
-// Quaternary Button
-// Quinary Button
 
 
 ///////////////////////////////////////////////
 // Icons
 ///////////////////////////////////////////////
 
-// Add your font-awesome codes here, then use "icon-bell" ( see /mixins/@mixin icons() )
+// Add your font-awesome codes here, then use "icon-bell"   
+// see /mixins/@mixin icons()
 $icons: (
   "bell": "f123",
   "calendar": "f123",
@@ -214,13 +212,13 @@ $icons: (
 // Lists
 ///////////////////////////////////////////////
 
-$ul-color: $clr-black;
+$ul-color: $clr-white;
 $ul-fontSize: 1.25rem;
 $ul-fontWeight: normal;
 
 $li-verticalPadding: .5rem;
 $li-paddingLeft: 1.35rem;
-$li-listIconColor: $clr-quinary;
+$li-listIconColor: $clr-tertiary;
 $li-listIconDiameter: .5rem;
 $li-listIconLeftOffset: .2rem;
 
@@ -233,13 +231,13 @@ $header-heightDesktopMaximized: 110px;
 $header-heightDesktopMinimized: 90px;
 $header-heightMobileMaximized: 80px;
 $header-heightMobileMinimized: 60px;
-$header-hideOnScroll: 'no';
+$header-hideOnScroll: true;
 
-$header-heightTransitionSpeed: $transition-fast;
+$header-heightTransitionSpeed: $transition-medium;
 
 // <nav>
 $navbar-verticalLogoPadding: 25%;
-$navbar-backgroundColor: $clr-black;
+$navbar-backgroundColor: linear-gradient(to right, #007bff, #6f42c1);
 $navbar-logo-maxWidth: 200px;
 
 // This needs to be uncommented if it is used => atoms/header.scss
@@ -263,6 +261,15 @@ $navbar-burgerMenuHeight: 2rem;
 $navbar-burgerMenuBarHeight: .25rem;
 $navbar-burgerMenuBarColor: $clr-primary;
 $navbar-burgerMenuBarBorderRadius: .2rem;
+
+// Mobile overlay when Nav is open
+$navbar-mobile-backgroundColor: $clr-black;
+
+///////////////////////////////////////////////
+// Footer
+///////////////////////////////////////////////
+
+$footer-backgroundColor: $clr-black;
 
 ///////////////////////////////////////////////
 // Forms

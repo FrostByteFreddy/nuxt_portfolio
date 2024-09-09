@@ -1,24 +1,27 @@
 <template>
-  <div>
-    <Navbar />
-    <main>
-      <nuxt />
-    </main>
-    <Footer />
-  </div>
+    <div>
+        <Navbar />
+        <main>
+            <nuxt />
+        </main>
+        <Footer />
+
+        <transition name="page" mode="out-in">
+            <div class="page-transition-wrapper"></div>
+        </transition>
+    </div>
 </template>
 
-
 <script>
-    import Navbar from '../components/Navbar'
-    import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
-    import '~/assets/compiled/styles.min.css';
+import '~/assets/compiled/main.css';
 
-    export default {
-        components: { 
-            Navbar, 
-            Footer,
-        }
+export default {
+    components: {
+        Navbar,
+        Footer,
     }
+}
 </script>
