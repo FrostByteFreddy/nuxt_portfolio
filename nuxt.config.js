@@ -1,5 +1,4 @@
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'portfolio',
     htmlAttrs: {
@@ -16,28 +15,33 @@ export default {
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  // watch and render scss
+//   hooks: {
+//     'build:done' () {
+//       const { spawn } = require('child_process');
+//       spawn('npm', ['run', 'watch:scss'], { stdio: 'inherit' }); 
+//     }
+//   },
+
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
+
   css: [
   ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
+    '@nuxtjs/style-resources',
   ],
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
 }

@@ -1,0 +1,63 @@
+.nav-menu {
+
+    
+    // Desktop
+    &-links {
+
+        all: unset;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+
+        li {
+
+            a {
+
+                font-size: $navbar-linkFontSize;
+                font-weight: $navbar-linkFontWeight;
+                font-family: $navbar-linkFontFamily;
+                line-height: 1;
+            }
+
+            // Normal Links
+            a:not(.btn) {
+
+                padding: $navbar-linkPadding;
+                color: $navbar-linkColor;
+
+                // Add a bit of top offset to center it correctly
+                position: relative;
+                top: 2px;
+                transition: $transition-fast opacity ease-in-out;
+
+                // Current link
+                &.current {
+
+                    opacity: .7;
+                }
+            }
+
+            // Call to Action
+            a.btn {
+
+                margin-left: $navbar-buttonOffsetLeft;
+            }
+        }
+    }
+
+    &-links-mobile {
+
+        position: absolute;
+        top: $header-heightMobileMaximized;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+
+        transition: max-height $transition-medium ease-in-out;
+        max-height: 0;
+        height: 100vh;
+
+        background-color: $navbar-mobile-backgroundColor;
+    }
+}

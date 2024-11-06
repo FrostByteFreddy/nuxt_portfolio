@@ -1,0 +1,53 @@
+///////////////////////////////////////////////
+// Navigation <nav>
+///////////////////////////////////////////////
+
+nav {
+
+    height: 100%;
+    width: $container-maxWidthDesktop;
+
+    @include below('xl') {
+        
+        width: $container-maxWidthMobile;
+    }
+
+    // Desktop & Mobile Nav
+    [data-device="desktop"],
+    [data-device="mobile"] {
+
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        height: 100%;
+    }
+
+    [data-device="desktop"] {
+
+        display: flex;
+
+        @include below($navbar-burgerMenuBreakpoint) {
+
+            display: none;
+        }
+    }
+
+    [data-device="mobile"] {
+        
+        display: none;
+
+        @include below($navbar-burgerMenuBreakpoint) {
+
+            display: flex;
+        }
+
+        // Menu open on mobile
+        &.active {
+
+            .nav-menu-links-mobile {
+
+                max-height: calc(100vh - #{$header-heightMobileMaximized});
+            }
+        }
+    }
+}

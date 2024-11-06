@@ -1,0 +1,36 @@
+///////////////////////////////////////////////
+// Main <main>
+///////////////////////////////////////////////
+
+main {
+
+    // Prevent rubberbanding on mac
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    
+    // Desktop
+    margin-top: $header-heightDesktopMaximized;
+    transition: margin-top $header-heightTransitionSpeed ease;
+
+    overflow: hidden;
+
+    // When header is minimized on Desktop
+    header[data-state="minimized"] + & {
+
+        margin-top: $header-heightDesktopMinimized;
+    }
+
+    // Mobile
+    @include below('md') {
+
+        margin-top: $header-heightMobileMaximized;
+
+        // When header is minimized on Mobile
+        header[data-state="minimized"] + & {
+
+            margin-top: $header-heightMobileMinimized;
+        }
+    }
+}
