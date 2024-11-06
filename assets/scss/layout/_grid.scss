@@ -32,8 +32,8 @@
 
     .col-#{$i} { 
 
-        flex: 0 0 calc((100% / 12 * $i) - var(--gutter-x)); 
-        max-width: calc((100% / 12 * $i) - var(--gutter-x)); 
+        flex: 0 0 calc((100% / 12 * #{$i}) - var(--gutter-x)); 
+        max-width: calc((100% / 12 * #{$i}) - var(--gutter-x)); 
 
         padding-right: calc(var(--gutter-x) * .5);
         padding-left: calc(var(--gutter-x) * .5);
@@ -49,8 +49,8 @@
         
         .col-sm-#{$i} {
 
-            flex: 0 0 calc((100% / 12 * $i) - var(--gutter-x)); 
-            max-width: calc((100% / 12 * $i) - var(--gutter-x)); 
+            flex: 0 0 calc((100% / 12 * #{$i}) - var(--gutter-x)); 
+            max-width: calc((100% / 12 * #{$i}) - var(--gutter-x)); 
 
             padding-right: calc(var(--gutter-x) * .5);
             padding-left: calc(var(--gutter-x) * .5);
@@ -67,8 +67,8 @@
 
         .col-md-#{$i} {
 
-            flex: 0 0 calc((100% / 12 * $i) - var(--gutter-x)); 
-            max-width: calc((100% / 12 * $i) - var(--gutter-x)); 
+            flex: 0 0 calc((100% / 12 * #{$i}) - var(--gutter-x)); 
+            max-width: calc((100% / 12 * #{$i}) - var(--gutter-x)); 
 
             padding-right: calc(var(--gutter-x) * .5);
             padding-left: calc(var(--gutter-x) * .5);
@@ -85,8 +85,8 @@
 
         .col-lg-#{$i} {
 
-            flex: 0 0 calc((100% / 12 * $i) - var(--gutter-x)); 
-            max-width: calc((100% / 12 * $i) - var(--gutter-x)); 
+            flex: 0 0 calc((100% / 12 * #{$i}) - var(--gutter-x)); 
+            max-width: calc((100% / 12 * #{$i}) - var(--gutter-x)); 
 
             padding-right: calc(var(--gutter-x) * .5);
             padding-left: calc(var(--gutter-x) * .5);
@@ -103,8 +103,8 @@
 
         .col-xl-#{$i} {
             
-            flex: 0 0 calc((100% / 12 * $i) - var(--gutter-x)); 
-            max-width: calc((100% / 12 * $i) - var(--gutter-x)); 
+            flex: 0 0 calc((100% / 12 * #{$i}) - var(--gutter-x)); 
+            max-width: calc((100% / 12 * #{$i}) - var(--gutter-x)); 
 
             padding-right: calc(var(--gutter-x) * .5);
             padding-left: calc(var(--gutter-x) * .5);

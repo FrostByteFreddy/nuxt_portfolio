@@ -28,7 +28,7 @@ section {
         }
 
         // Overlay
-        &::before {
+        &.overlay::before {
 
             content: "";
             position: absolute;
