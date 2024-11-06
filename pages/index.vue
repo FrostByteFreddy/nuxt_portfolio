@@ -10,9 +10,9 @@
 
 <script>
 
-import HeroSimple from '../ContentElements/Hero/HeroSimple.vue'
-import TextMedia from '../ContentElements/TextMedia.vue'
-import Image from '../ContentElements/Media/Image.vue'
+import HeroSimple  from '../ContentElements/Hero/HeroSimple.vue'
+import TextMedia   from '../ContentElements/TextMedia.vue'
+import Image       from '../ContentElements/Media/Image.vue'
 
 export default {
     components: {
