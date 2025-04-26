@@ -1,5 +1,5 @@
 <template>
-    <section data-component="hero" class="background-tertiary-light hero-simple" :style="{ 'background-image': `url(${image})` }">
+    <section data-component="hero" class="background-tertiary-light hero-simple" :style="{ 'background-image': `url(${backgroundImage})` }">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-10">
@@ -16,7 +16,7 @@
 export default {
     name: 'HeroSimple',
     props: {
-        image: {
+        backgroundImage: {
             type: String,
             default: '/images/default.jpg'
         },

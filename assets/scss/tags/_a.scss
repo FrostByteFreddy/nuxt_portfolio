@@ -35,7 +35,7 @@ a {
         }
 
         // Primary
-        &.primary {
+        &.btn-primary {
 
             color: $btn-primary-color;
             background-color: $btn-primary-backgroundColor;
@@ -47,10 +47,11 @@ a {
         }
 
         // Secondary
-        &.secondary {
+        &.btn-secondary {
 
-            color: $btn-secondary-color;
-            background-color: $btn-secondary-backgroundColor;
+            color: $clr-white;
+            background-color: $clr-primary;
+            box-shadow: 0px 0px 20px rgba(92, 128, 255, .75);
 
             &:hover {
 
@@ -59,7 +60,7 @@ a {
         }  
 
         // Quaternary
-        &.tertiary {
+        &.btn-tertiary {
 
             color: $btn-tertiary-color;
             background-color: $btn-tertiary-backgroundColor;

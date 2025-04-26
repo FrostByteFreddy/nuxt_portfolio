@@ -7,11 +7,11 @@ $clr-white: #ffffff;
 $clr-transparent: transparent;
 
 // Colors (prefix clr)
-$clr-primary:   #007bff; 
+$clr-primary:   #000000; 
 $clr-secondary: #6f42c1; 
 $clr-tertiary:  #ffd700; 
 
-$clr-gradient-blue-purple: linear-gradient(to right, $clr-primary, $clr-secondary);
+$gradient-primary: linear-gradient(to right, #50D3FC 11%, #0A1FAB 42%, #FF2095 87%); 
 
 // Lighter shades (might result in white if the percentage is too hight)
 $clr-primaryLight: lighten($clr-primary, 30%); // Adjust percentage for desired lightness
@@ -236,8 +236,8 @@ $header-hideOnScroll: true;
 $header-heightTransitionSpeed: $transition-medium;
 
 // <nav>
-$navbar-verticalLogoPadding: 25%;
-$navbar-backgroundColor: linear-gradient(to right, #007bff, #6f42c1);
+$navbar-verticalLogoPadding: 10%;
+$navbar-backgroundColor: $clr-primary;
 $navbar-logo-maxWidth: 200px;
 
 // This needs to be uncommented if it is used => atoms/header.scss

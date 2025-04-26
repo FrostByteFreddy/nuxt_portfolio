@@ -24,9 +24,8 @@ export default {
             links: [
                 { to: "/", name: "Home" },
                 { to: "/about", name: "About" },
-                { to: "/contact", name: "Contact" },
-                { to: "/experience", name: "Experience" },
                 { to: "/work", name: "Work" },
+                { to: "/contact", name: "Contact", class: "btn btn-secondary"},
             ],
         };
     },

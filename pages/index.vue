@@ -1,6 +1,6 @@
 <template>
     <HeroSimple 
-        image="/images/default.jpg"
+        backgroundImage="/images/default.jpg"
         title="<h1>Home</h1>"
         text="<p class='lead'>This is some descriptive text about your project. Some descriptive text about your project.</p>"
         buttonText="Learn More" 
