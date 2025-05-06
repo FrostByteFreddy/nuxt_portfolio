@@ -1,19 +1,22 @@
+@use '../variables';
+@use '../mixins';
+
 // Hero Section Template
 section {
 
     &[data-component="hero"] {
 
         position: relative;
-        padding: $section-heroVerticalPadding 0;
+        padding: variables.$section-heroVerticalPadding 0;
 
         display: flex;
         align-items: center;
 
         // Caluclate height for Desktop
-        $section-heroActualHeightDesktop: calc((#{$section-heroHeight} - 2 * #{$section-heroVerticalPadding}) - #{$header-heightDesktopMaximized});
+        $section-heroActualHeightDesktop: calc((#{variables.$section-heroHeight} - 2 * #{variables.$section-heroVerticalPadding}) - #{variables.$header-heightDesktopMaximized});
         min-height: $section-heroActualHeightDesktop;
 
-        @include background-image(cover); // Include background-image cover
+        @include mixins.background-image(cover); // Include background-image cover
         
         h1, .h1,
         h2, .h2,
@@ -24,7 +27,7 @@ section {
         p {
 
             // Override the text Color
-            color: $section-heroTextColor;
+            color: variables.$section-heroTextColor;
         }
 
         // Overlay
@@ -33,8 +36,8 @@ section {
             content: "";
             position: absolute;
             inset: 0;
-            background-color: $section-heroBackgroundImageOverlayColor;
-            opacity: $section-heroBackgroundImageOverlayopacity;
+            background-color: variables.$section-heroBackgroundImageOverlayColor;
+            opacity: variables.$section-heroBackgroundImageOverlayopacity;
         }
 
 
@@ -45,9 +48,9 @@ section {
         }
 
         // Calucalate height on mobile
-        @include below('md') {
+        @include mixins.below('md') {
 
-            $section-heroActualHeightMobile: calc(#{$section-heroHeight} - 2 * #{$section-heroVerticalPadding} - #{$header-heightMobileMaximized});
+            $section-heroActualHeightMobile: calc(#{variables.$section-heroHeight} - 2 * #{variables.$section-heroVerticalPadding} - #{variables.$header-heightMobileMaximized});
             min-height: $section-heroActualHeightMobile;
         }
     }

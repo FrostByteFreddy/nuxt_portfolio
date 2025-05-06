@@ -1,3 +1,5 @@
+@use 'variables';
+
 ///////////////////////////////////////////////
 // Media Queries
 ///////////////////////////////////////////////
@@ -5,9 +7,9 @@
 // Below a certain breakpoint
 @mixin below($breakpoint) {
 
-    @if map-has-key($breakpoints, $breakpoint) {
+    @if map-has-key(variables.$breakpoints, $breakpoint) {
 
-        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        $breakpoint-value: map-get(variables.$breakpoints, $breakpoint);
         @media (max-width: $breakpoint-value) {
 
             @content;
@@ -21,9 +23,9 @@
 // Above a certain breakpoint
 @mixin above($breakpoint) {
 
-    @if map-has-key($breakpoints, $breakpoint) {
+    @if map-has-key(variables.$breakpoints, $breakpoint) {
 
-        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        $breakpoint-value: map-get(variables.$breakpoints, $breakpoint);
         @media (min-width: $breakpoint-value) {
 
             @content;
@@ -37,10 +39,10 @@
 // Between two certain breakpoints (dont use this if possible)
 @mixin between($lower, $upper) {
 
-    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    @if map-has-key(variables.$breakpoints, $lower) and map-has-key($breakpoints, $upper) {
 
-        $lower-value: map-get($breakpoints, $lower);
-        $upper-value: map-get($breakpoints, $upper);
+        $lower-value: map-get(variables.$breakpoints, $lower);
+        $upper-value: map-get(variables.$breakpoints, $upper);
         @media (min-width: $lower-value) and (max-width: $upper-value) {
 
             @content;
@@ -117,12 +119,12 @@
 @mixin icon($position) {
 
     position: absolute;
-    #{$position}: calc(#{$btn-default-paddingWithButtonIcon} / 3.4);
+    #{$position}: calc(#{variables.$btn-default-paddingWithButtonIcon} / 3.4);
     top: 50%;
     transform: translateY(-50%);
     background-repeat: no-repeat;
 
-    font-family: $ff-fontawesome;
+    font-family: variables.$ff-fontawesome;
     color: inherit;
     font-size: inherit;
 }
@@ -141,11 +143,11 @@
         }
     }
 }
-@include icons($icons);
+@include icons(variables.$icons);
 
 
 // Background Colors and Colors
-@each $name, $color in $colors {
+@each $name, $color in variables.$colors {
 
     .background-#{$name} {
 
@@ -159,7 +161,7 @@
 }
 
 // Margin classes
-@each $name, $margin in $margins {
+@each $name, $margin in variables.$margins {
 
     // Margin-top
     .mt-#{$name} {

@@ -1,3 +1,6 @@
+@use '../variables';
+@use '../mixins';
+
 ///////////////////////////////////////////////
 // Main <main>
 ///////////////////////////////////////////////
@@ -11,26 +14,26 @@ main {
     -webkit-overflow-scrolling: touch;
     
     // Desktop
-    margin-top: $header-heightDesktopMaximized;
-    transition: margin-top $header-heightTransitionSpeed ease;
+    margin-top: variables.$header-heightDesktopMaximized;
+    transition: margin-top variables.$header-heightTransitionSpeed ease;
 
     overflow: hidden;
 
     // When header is minimized on Desktop
     header[data-state="minimized"] + & {
 
-        margin-top: $header-heightDesktopMinimized;
+        margin-top: variables.$header-heightDesktopMinimized;
     }
 
     // Mobile
-    @include below('md') {
+    @include mixins.below('md') {
 
-        margin-top: $header-heightMobileMaximized;
+        margin-top: variables.$header-heightMobileMaximized;
 
         // When header is minimized on Mobile
         header[data-state="minimized"] + & {
 
-            margin-top: $header-heightMobileMinimized;
+            margin-top: variables.$header-heightMobileMinimized;
         }
     }
 }

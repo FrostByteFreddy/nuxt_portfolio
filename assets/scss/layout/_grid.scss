@@ -1,3 +1,6 @@
+@use '../variables';
+@use '../mixins';
+
 ///////////////////////////////////////////////
 // Simplified Version of Bootstrap Grid
 ///////////////////////////////////////////////
@@ -9,13 +12,13 @@
     flex-wrap: wrap;
 
     // Set the custom property to the default gutter size.
-    --gutter-x: #{map-get($grid-spacing, 0)};
-    --gutter-y: #{map-get($grid-spacing, 0)};
+    --gutter-x: #{map-get(variables.$grid-spacing, 0)};
+    --gutter-y: #{map-get(variables.$grid-spacing, 0)};
 
     margin-right: calc(var(--gutter-x) * -.5);
     margin-left: calc(var(--gutter-x) * -.5);
   
-    @each $index, $size in $grid-spacing {
+    @each $index, $size in variables.$grid-spacing {
 
         &.gx-#{$index} {
             --gutter-x: #{$size};
@@ -45,7 +48,7 @@
 
 @for $i from 1 through 12 {
     
-    @include above('sm') {
+    @include mixins.above('sm') {
         
         .col-sm-#{$i} {
 
@@ -63,7 +66,7 @@
 
 @for $i from 1 through 12 {
 
-    @include above('md') {
+    @include mixins.above('md') {
 
         .col-md-#{$i} {
 
@@ -81,7 +84,7 @@
 
 @for $i from 1 through 12 {
 
-    @include above('lg') {
+    @include mixins.above('lg') {
 
         .col-lg-#{$i} {
 
@@ -99,7 +102,7 @@
 
 @for $i from 1 through 12 {
 
-    @include above('xl') {
+    @include mixins.above('xl') {
 
         .col-xl-#{$i} {
             

@@ -1,27 +1,30 @@
+@use '../variables';
+@use '../mixins';
+
 li {
 
     // Dont to this for the navigation
     &:not(.nav-menu-link) {
 
         position: relative;
-        padding-left: $li-paddingLeft;
+        padding-left: variables.$li-paddingLeft;
     
         & + li {
     
-            margin-top: $li-verticalPadding;
+            margin-top: variables.$li-verticalPadding;
         }
     
         &::before {
             
             content: "";
             position: absolute;
-            left: $li-listIconLeftOffset;
+            left: variables.$li-listIconLeftOffset;
             top: 50%;
-            height: $li-listIconDiameter;
-            width: $li-listIconDiameter;
+            height: variables.$li-listIconDiameter;
+            width: variables.$li-listIconDiameter;
     
             transform: translateY(-50%);
-            background-color: $li-listIconColor;
+            background-color: variables.$li-listIconColor;
             border-radius: 50%;
         }
     }

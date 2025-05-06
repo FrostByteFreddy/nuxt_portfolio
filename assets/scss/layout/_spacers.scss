@@ -1,8 +1,11 @@
+@use '../variables';
+@use '../mixins';
+
 //////////////////////////////////////////////////////////
 // Create classes for vertical spacing between sections
 //////////////////////////////////////////////////////////
 
-@each $name, $size in $vertical-spacing {
+@each $name, $size in variables.$vertical-spacing {
 
     .space-after-#{$name} {
 

@@ -1,3 +1,6 @@
+@use '../variables';
+@use '../mixins';
+
 ///////////////////////////////////////////////
 // Navigation <nav>
 ///////////////////////////////////////////////
@@ -5,11 +8,11 @@
 nav {
 
     height: 100%;
-    width: $container-maxWidthDesktop;
+    width: variables.$container-maxWidthDesktop;
 
-    @include below('xl') {
+    @include mixins.below('xl') {
         
-        width: $container-maxWidthMobile;
+        width: variables.$container-maxWidthMobile;
     }
 
     // Desktop & Mobile Nav
@@ -26,7 +29,7 @@ nav {
 
         display: flex;
 
-        @include below($navbar-burgerMenuBreakpoint) {
+        @include mixins.below(variables.$navbar-burgerMenuBreakpoint) {
 
             display: none;
         }
@@ -36,7 +39,7 @@ nav {
         
         display: none;
 
-        @include below($navbar-burgerMenuBreakpoint) {
+        @include mixins.below(variables.$navbar-burgerMenuBreakpoint) {
 
             display: flex;
         }
@@ -46,7 +49,7 @@ nav {
 
             .nav-menu-links-mobile {
 
-                max-height: calc(100vh - #{$header-heightMobileMaximized});
+                max-height: calc(100vh - #{variables.$header-heightMobileMaximized});
             }
         }
     }

@@ -1,8 +1,11 @@
+@use '../variables';
+@use '../mixins';
+
 button {
 
-    color: $btn-default-color;
-    background-color: $btn-default-backgroundColor;
-    padding: $btn-default-padding;
+    color: variables.$btn-default-color;
+    background-color: variables.$btn-default-backgroundColor;
+    padding: variables.$btn-default-padding;
 
     &:hover {
 

@@ -1,3 +1,6 @@
+@use '../variables';
+@use '../mixins';
+
 ///////////////////////////////////////////////
 // Paragraphs
 ///////////////////////////////////////////////
@@ -5,19 +8,19 @@
 p {
 
     margin: 0;
-    line-height: $p-lineHeight;
+    line-height: variables.$p-lineHeight;
 
     & + p {
 
-        margin-top: $p-consecutiveMarginTop;
+        margin-top: variables.$p-consecutiveMarginTop;
     }
 
     // Lead text
     &.lead {
 
-        font-size: $p-lead-fontSize;
-        font-weight: $p-lead-fontWeight;
-        color: $p-lead-color;
+        font-size: variables.$p-lead-fontSize;
+        font-weight: variables.$p-lead-fontWeight;
+        color: variables.$p-lead-color;
     }
 
     &.align-right {

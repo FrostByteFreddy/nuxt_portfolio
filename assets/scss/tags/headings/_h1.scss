@@ -1,10 +1,13 @@
+@use '../../variables';
+@use '../../mixins';
+
 h1,
 .h1 {
 
-    font-family: $h1-fontFamily;
-    font-size: $h1-fontSize;
-    font-weight: $h1-fontWeight;
-    line-height: $h1-lineHeight;
+    font-family: variables.$h1-fontFamily;
+    font-size: variables.$h1-fontSize;
+    font-weight: variables.$h1-fontWeight;
+    line-height: variables.$h1-lineHeight;
 
-    color: $h1-color;
+    color: variables.$h1-color;
 }

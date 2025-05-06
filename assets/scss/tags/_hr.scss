@@ -1,5 +1,8 @@
+@use '../variables';
+@use '../mixins';
+
 hr {
 
-    background-color: $clr-secondary;
+    background-color: variables.$clr-secondary;
     opacity: .2;
 }

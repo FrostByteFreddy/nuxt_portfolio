@@ -1,5 +1,7 @@
-.nav-menu {
+@use '../../variables';
+@use '../../mixins';
 
+.nav-menu {
     
     // Desktop
     &-links {
@@ -13,22 +15,22 @@
 
             a {
 
-                font-size: $navbar-linkFontSize;
-                font-weight: $navbar-linkFontWeight;
-                font-family: $navbar-linkFontFamily;
+                font-size: variables.$navbar-linkFontSize;
+                font-weight: variables.$navbar-linkFontWeight;
+                font-family: variables.$navbar-linkFontFamily;
                 line-height: 1;
             }
 
             // Normal Links
             a:not(.btn) {
 
-                padding: $navbar-linkPadding;
-                color: $navbar-linkColor;
+                padding: variables.$navbar-linkPadding;
+                color: variables.$navbar-linkColor;
 
                 // Add a bit of top offset to center it correctly
                 position: relative;
                 top: 2px;
-                transition: $transition-fast opacity ease-in-out;
+                transition: variables.$transition-fast opacity ease-in-out;
 
                 // Current link
                 &.current {
@@ -40,7 +42,7 @@
             // Call to Action
             a.btn {
 
-                margin-left: $navbar-buttonOffsetLeft;
+                margin-left: variables.$navbar-buttonOffsetLeft;
             }
         }
     }
@@ -48,16 +50,16 @@
     &-links-mobile {
 
         position: absolute;
-        top: $header-heightMobileMaximized;
+        top: variables.$header-heightMobileMaximized;
         bottom: 0;
         left: 0;
         right: 0;
         overflow: hidden;
 
-        transition: max-height $transition-medium ease-in-out;
+        transition: max-height variables.$transition-medium ease-in-out;
         max-height: 0;
         height: 100vh;
 
-        background-color: $navbar-mobile-backgroundColor;
+        background-color: variables.$navbar-mobile-backgroundColor;
     }
 }

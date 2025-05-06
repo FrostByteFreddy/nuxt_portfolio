@@ -1,15 +1,18 @@
+@use '../variables';
+@use '../mixins';
+
 html {
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: $clr-primary;
+    background: variables.$clr-primary;
 
     // Set 1rem to 16px
     font-size: 100%;
 
     // Set 1rem to 14px on tablet and below
-    @include below('md') {
+    @include mixins.below('md') {
 
         font-size: 87.5%;
     }

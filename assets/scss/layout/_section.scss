@@ -1,3 +1,6 @@
+@use '../variables';
+@use '../mixins';
+
 ///////////////////////////////////////////////
 // Section
 ///////////////////////////////////////////////
@@ -5,7 +8,7 @@
 section {
 
     // Space Before
-    @each $name, $size in $vertical-spacing {
+    @each $name, $size in variables.$vertical-spacing {
 
         &.space-before-#{$name} {
 
@@ -14,7 +17,7 @@ section {
     }
 
     // Space After
-    @each $name, $size in $vertical-spacing {
+    @each $name, $size in variables.$vertical-spacing {
 
         &.space-after-#{$name} {
 

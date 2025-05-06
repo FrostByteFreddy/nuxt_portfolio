@@ -1,3 +1,6 @@
+@use '../../variables';
+@use '../../mixins';
+
 ///////////////////////////////////////////////
 // Navigation Logo
 ///////////////////////////////////////////////
@@ -7,14 +10,14 @@
     &-logo { 
 
         width: auto;
-        height: calc(100% - calc(2 * #{$navbar-verticalLogoPadding}));
-        padding: $navbar-verticalLogoPadding 0;
+        height: calc(100% - calc(2 * #{variables.$navbar-verticalLogoPadding}));
+        padding: variables.$navbar-verticalLogoPadding 0;
 
         &-img {
 
             height: 100%;
             width: auto;
-            max-width: $navbar-logo-maxWidth;
+            max-width: variables.$navbar-logo-maxWidth;
         }
     }
 }

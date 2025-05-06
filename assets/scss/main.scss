@@ -1,74 +1,70 @@
 // Nuxt transitions
-@import 'toolbox/nuxt-transitions';
+@use 'toolbox/nuxt-transitions';
 
 ///////////////////////////////////////////////
 // Base
 ///////////////////////////////////////////////
 
-@import 'variables';
-@import 'fonts';
-@import 'mixins';
+@use 'variables';
+@use 'fonts';
+@use 'mixins';
 
 // Layout stuff
-@import 'layout/container';
-@import 'layout/grid';
-@import 'layout/spacers';
-@import 'layout/section';
+@use 'layout/container';
+@use 'layout/grid';
+@use 'layout/spacers';
+@use 'layout/section';
 
 
 ///////////////////////////////////////////////
 // Atoms
 ///////////////////////////////////////////////
 
-// Body and html
-@import 'tags/html';
-@import 'tags/body';
-
 // Headings
-@import 'tags/headings/all';
-@import 'tags/headings/h1';
-@import 'tags/headings/h2';
-@import 'tags/headings/h3';
-@import 'tags/headings/h4';
-@import 'tags/headings/h5';
-@import 'tags/headings/h6';
+@use 'tags/headings/all';
+@use 'tags/headings/h1';
+@use 'tags/headings/h2';
+@use 'tags/headings/h3';
+@use 'tags/headings/h4';
+@use 'tags/headings/h5';
+@use 'tags/headings/h6';
 
 // Other Atoms
-@import 'tags/a';
-@import 'tags/b';
-@import 'tags/body';
-@import 'tags/button';
-@import 'tags/code';
-@import 'tags/footer';
-@import 'tags/header';
-@import 'tags/hr';
-@import 'tags/html';
-@import 'tags/img';
-@import 'tags/input';
-@import 'tags/label';
-@import 'tags/li';
-@import 'tags/main';
-@import 'tags/nav';
-@import 'tags/ol';
-@import 'tags/p';
-@import 'tags/select';
-@import 'tags/span';
-@import 'tags/strong';
-@import 'tags/svg';
-@import 'tags/table';
-@import 'tags/td';
-@import 'tags/textarea';
-@import 'tags/tr';
-@import 'tags/ul';
+@use 'tags/a';
+@use 'tags/b';
+@use 'tags/body';
+@use 'tags/button';
+@use 'tags/code';
+@use 'tags/footer';
+@use 'tags/header';
+@use 'tags/hr';
+@use 'tags/html';
+@use 'tags/img';
+@use 'tags/input';
+@use 'tags/label';
+@use 'tags/li';
+@use 'tags/main';
+@use 'tags/nav';
+@use 'tags/ol';
+@use 'tags/p';
+@use 'tags/select';
+@use 'tags/span';
+@use 'tags/strong';
+@use 'tags/svg';
+@use 'tags/table';
+@use 'tags/td';
+@use 'tags/textarea';
+@use 'tags/tr';
+@use 'tags/ul';
 
 
 ///////////////////////////////////////////////
 // Partials
 ///////////////////////////////////////////////
 
-@import 'components/navigation/navigation-links';
-@import 'components/navigation/navigation-logo';
-@import 'components/navigation/burger-menu';
+@use 'components/navigation/navigation-links';
+@use 'components/navigation/navigation-logo';
+@use 'components/navigation/burger-menu';
 
 
 ///////////////////////////////////////////////
@@ -80,7 +76,7 @@
 // Content Elements
 ///////////////////////////////////////////////
 
-@import 'contentelements/hero';
-@import 'contentelements/text-media';
-@import 'contentelements/cards/cards';
-@import 'contentelements/cards/card'
+@use 'contentelements/hero';
+@use 'contentelements/text-media';
+@use 'contentelements/cards/cards';
+@use 'contentelements/cards/card'

@@ -1,8 +1,11 @@
+@use '../variables';
+@use '../mixins';
+
 ul {
 
-    font-size: $ul-fontSize;
-    font-weight: $ul-fontWeight;
-    color: $ul-color;
+    font-size: variables.$ul-fontSize;
+    font-weight: variables.$ul-fontWeight;
+    color: variables.$ul-color;
 
     list-style-type: none;
     margin: 0;

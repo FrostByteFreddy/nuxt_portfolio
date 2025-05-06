@@ -1,3 +1,6 @@
+@use '../../variables';
+@use '../../mixins';
+
 ///////////////////////////////////////////////
 // Applies to all headings
 ///////////////////////////////////////////////
@@ -10,7 +13,7 @@ h5, .h5,
 h6, .h6 {
 
     margin: 0;
-    margin-bottom: $headings-marginBottom;
+    margin-bottom: variables.$headings-marginBottom;
 }
 
 // Apply top margin only when the heading is preceded by another element
@@ -27,5 +30,5 @@ h6, .h6 {
 * + h6, 
 * + .h6 {
 
-    margin-top: $headings-marginTop;
+    margin-top: variables.$headings-marginTop;
 }

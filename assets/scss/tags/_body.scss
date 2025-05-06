@@ -1,6 +1,9 @@
+@use '../variables';
+@use '../mixins';
+
 body {
 
-    font-family: $ff-main;
+    font-family: variables.$ff-main;
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;

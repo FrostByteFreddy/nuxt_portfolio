@@ -1,4 +1,7 @@
+@use '../variables';
+@use '../mixins';
+
 footer {
 
-    background-color: $footer-backgroundColor;
+    background-color: variables.$footer-backgroundColor;
 }

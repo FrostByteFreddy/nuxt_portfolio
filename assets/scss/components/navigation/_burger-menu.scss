@@ -1,8 +1,11 @@
+@use '../../variables';
+@use '../../mixins';
+
 #burger-menu {
 
     position: relative;
-    height: $navbar-burgerMenuHeight;
-    width: $navbar-burgerMenuWidth;
+    height: variables.$navbar-burgerMenuHeight;
+    width: variables.$navbar-burgerMenuWidth;
     margin: auto 0;
 
     display: flex;
@@ -12,9 +15,9 @@
 
         position: absolute;
         display: block;
-        height: $navbar-burgerMenuBarHeight;
-        background-color: $navbar-burgerMenuBarColor;
-        border-radius: $navbar-burgerMenuBarBorderRadius;
+        height: variables.$navbar-burgerMenuBarHeight;
+        background-color: variables.$navbar-burgerMenuBarColor;
+        border-radius: variables.$navbar-burgerMenuBarBorderRadius;
 
         left: 0;
         right: 0;

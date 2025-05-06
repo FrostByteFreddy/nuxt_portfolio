@@ -1,3 +1,6 @@
+@use '../variables';
+@use '../mixins';
+
 a {
 
     position: relative;
@@ -14,20 +17,20 @@ a {
     // All buttons
     &.btn {
 
-        color: $btn-default-color;
-        background-color: $btn-default-backgroundColor;
+        color: variables.$btn-default-color;
+        background-color: variables.$btn-default-backgroundColor;
 
-        font-size: $btn-default-fontSize;
-        line-height: $btn-default-lineHeight;
-        font-weight: $btn-default-fontWeight;
-        padding: $btn-default-padding;
-        border-radius: $btn-default-borderRadius;
+        font-size: variables.$btn-default-fontSize;
+        line-height: variables.$btn-default-lineHeight;
+        font-weight: variables.$btn-default-fontWeight;
+        padding: variables.$btn-default-padding;
+        border-radius: variables.$btn-default-borderRadius;
 
         text-align: center;
         max-width: max-content;
         display: flex;
 
-        transition: $btn-default-transition;
+        transition: variables.$btn-default-transition;
 
         &:hover {
 
@@ -37,8 +40,8 @@ a {
         // Primary
         &.btn-primary {
 
-            color: $btn-primary-color;
-            background-color: $btn-primary-backgroundColor;
+            color: variables.$btn-primary-color;
+            background-color: variables.$btn-primary-backgroundColor;
 
             &:hover {
 
@@ -49,9 +52,9 @@ a {
         // Secondary
         &.btn-secondary {
 
-            color: $clr-white;
-            background-color: $clr-primary;
-            box-shadow: 0px 0px 20px rgba(92, 128, 255, .75);
+            color: variables.$clr-white;
+            background-color: variables.$clr-primary;
+            border: .1rem solid variables.$clr-white;
 
             &:hover {
 
@@ -62,8 +65,8 @@ a {
         // Quaternary
         &.btn-tertiary {
 
-            color: $btn-tertiary-color;
-            background-color: $btn-tertiary-backgroundColor;
+            color: variables.$btn-tertiary-color;
+            background-color: variables.$btn-tertiary-backgroundColor;
 
             &:hover {
 
@@ -80,22 +83,22 @@ a {
             // Icon on left side
             &-left {
 
-                padding-left: $btn-default-paddingWithButtonIcon;
+                padding-left: variables.$btn-default-paddingWithButtonIcon;
 
                 &::after {
 
-                    @include icon(left);
+                    @include mixins.icon(left);
                 }
             }
 
             // Icon on right side
             &-right {
 
-                padding-right: $btn-default-paddingWithButtonIcon;
+                padding-right: variables.$btn-default-paddingWithButtonIcon;
 
                 &::after {
 
-                    @include icon(right);
+                    @include mixins.icon(right);
                 }
             }
 

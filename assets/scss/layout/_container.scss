@@ -1,12 +1,15 @@
+@use '../variables';
+@use '../mixins';
+
 ///////////////////////////////////////////////
 // Containers
 ///////////////////////////////////////////////
 
 .container {
 
-    width: $container-maxWidthDesktop;
+    width: variables.$container-maxWidthDesktop;
     margin: auto;
-    padding: 0 $container-padding;
+    padding: 0 variables.$container-padding;
     overflow: hidden;
 
     &-fluid {
@@ -14,8 +17,8 @@
         width: 100%;
     }
 
-    @include below('xl') {
+    @include mixins.below('xl') {
 
-        max-width: $container-maxWidthMobile;
+        max-width: variables.$container-maxWidthMobile;
     }
 }
