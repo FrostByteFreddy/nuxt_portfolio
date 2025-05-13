@@ -41,7 +41,8 @@ a {
         &.btn-primary {
 
             color: variables.$btn-primary-color;
-            background-color: variables.$btn-primary-backgroundColor;
+            background: variables.$btn-primary-backgroundColor;
+            font-size: variables.$btn-primary-fontSize;
 
             &:hover {
 
@@ -53,7 +54,7 @@ a {
         &.btn-secondary {
 
             color: variables.$clr-white;
-            background-color: variables.$clr-primary;
+            background: variables.$clr-primary;
             border: .1rem solid variables.$clr-white;
 
             &:hover {
@@ -66,7 +67,7 @@ a {
         &.btn-tertiary {
 
             color: variables.$btn-tertiary-color;
-            background-color: variables.$btn-tertiary-backgroundColor;
+            background: variables.$btn-tertiary-backgroundColor;
 
             &:hover {
 

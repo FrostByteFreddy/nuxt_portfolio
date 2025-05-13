@@ -9,9 +9,9 @@ $clr-transparent: transparent;
 // Colors (prefix clr)
 $clr-primary:   #000000; 
 $clr-secondary: #6f42c1; 
-$clr-tertiary:  #ffd700; 
+$clr-tertiary:  $clr-white; 
 
-$gradient-primary: linear-gradient(to right, #50D3FC 11%, #0A1FAB 42%, #FF2095 87%); 
+$gradient-primary: linear-gradient(145deg, #FF4CAA 5%, #2038D8 55%, #00AEE4 93%);; 
 
 // Lighter shades (might result in white if the percentage is too hight)
 $clr-primaryLight: lighten($clr-primary, 30%); // Adjust percentage for desired lightness
@@ -20,8 +20,8 @@ $clr-tertiaryLight: lighten($clr-tertiary, 20%);
 
 // Font-Families (prefix ff)
 $ff-main: 'Montserrat';
-$ff-secondary: 'Raleway';
-$ff-fontawesome: 'Fontawesome 5';
+$ff-secondary: 'Bayon';
+$ff-fontawesome: 'Font Awesome 6 Pro';
 
 // Background-Color for body
 $body-backgroundColor: $clr-secondary;
@@ -86,7 +86,7 @@ $colors: (
 
 // Containers
 $container-padding: 20px;
-$container-maxWidthDesktop: 1160px;
+$container-maxWidthDesktop: 1500px;
 $container-maxWidthMobile: calc(100vw - 2 * #{$container-padding});
 
 // Sections
@@ -112,10 +112,10 @@ $headings-marginBottom: 1rem;
 
 // Heading 1
 $h1-color: $clr-tertiary;
-$h1-fontSize: 3.375rem;
-$h1-fontWeight: bold;
-$h1-lineHeight: $headings-lineHeight;
-$h1-fontFamily: $ff-main;
+$h1-fontSize: 8rem;
+$h1-fontWeight: normal;
+$h1-lineHeight: .95;
+$h1-fontFamily: $ff-secondary;
 
 // Heading 2
 $h2-color: $clr-primary;
@@ -171,7 +171,7 @@ $p-lead-color: $clr-tertiary;
 $btn-default-fontSize: 1rem; // 16px
 $btn-default-lineHeight: 1;
 $btn-default-fontWeight: 500;
-$btn-default-padding: .85rem 1.5rem;
+$btn-default-padding: 1rem 1.85rem;
 $btn-default-color: $clr-white;
 $btn-default-backgroundColor: $clr-primary; 
 
@@ -179,9 +179,12 @@ $btn-default-paddingWithButtonIcon: 3.5rem;
 $btn-default-transition: color $transition-fast, background-color $transition-fast;
 $btn-default-borderRadius: .5rem;
 
+
 // Primary Button
 $btn-primary-color: $clr-white;
-$btn-primary-backgroundColor: $clr-primary;
+$btn-primary-backgroundColor: $gradient-primary;
+$btn-primary-fontSize: 1.25rem;
+
 // ....
 
 // Secondary Button
@@ -202,10 +205,11 @@ $btn-tertiary-backgroundColor: $clr-secondary;
 // Add your font-awesome codes here, then use "icon-bell"   
 // see /mixins/@mixin icons()
 $icons: (
-  "bell": "f123",
-  "calendar": "f123",
-  "clock": "f089",
-  "someIcon": "f123",
+  "bell": "\f123",
+  "calendar": "\f123",
+  "clock": "\f089",
+  "arrow-right": "\f061",
+  "someIcon": "\f123",
 );
 
 ///////////////////////////////////////////////

@@ -1,11 +1,14 @@
 <template>
-    <section data-component="hero" class="background-tertiary-light hero-simple" :style="{ 'background-image': `url(${backgroundImage})` }">
+    <section data-component="hero" class="background-black hero-simple" :style="{ 'background-image': `url(${backgroundImage})` }">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-10">
+            <div class="row g-5">
+                <div class="col-md-7 col-10">
                     <div v-html="title"></div>
                     <div v-html="text"></div>
                     <a v-if="buttonText && buttonUrl" :href="buttonUrl" :class="buttonClasses">{{ buttonText }}</a>
+                </div>
+                <div class="col-md-5 col-10">
+                    <img alt="" :src=textMediaImage />
                 </div>
             </div>
         </div>
@@ -18,23 +21,23 @@ export default {
     props: {
         backgroundImage: {
             type: String,
-            default: '/images/default.jpg'
+            default: ''
         },
         title: {
             type: String,
-            default: '<h1>Lorem ipsum!<h1>'
         },
         text: {
             type: String,
-            default: '<p class="lead">Lorem ipsum</p>'
+        },
+        textMediaImage: {
+            type: String,
+            default: ''
         },
         buttonText: {
             type: String,
-            default: 'More'
         },
         buttonUrl: {
             type: String,
-            default: 'https://google.come'
         },
         buttonClasses: {
             type: String,
