@@ -32,23 +32,39 @@ a {
 
         transition: variables.$btn-default-transition;
 
-        &:hover {
-
-
-        }
+        &:hover {}
 
         // Primary
         &.btn-primary {
 
             color: variables.$btn-primary-color;
-            background: variables.$btn-primary-backgroundColor;
             font-size: variables.$btn-primary-fontSize;
 
+            --btn-grad-angle:     #{variables.$initial-btn-grad-angle};
+            --btn-grad-stop1-pos: #{variables.$initial-btn-grad-stop1-pos};
+            --btn-grad-stop2-pos: #{variables.$initial-btn-grad-stop2-pos};
+            --btn-grad-stop3-pos: #{variables.$initial-btn-grad-stop3-pos};
+
+            background: linear-gradient(
+                    var(--btn-grad-angle),
+                    variables.$gradient-color-1 var(--btn-grad-stop1-pos),
+                    variables.$gradient-color-2 var(--btn-grad-stop2-pos),
+                    variables.$gradient-color-3 var(--btn-grad-stop3-pos));
+
+            transition:
+                --btn-grad-angle variables.$transition-long ease,
+                --btn-grad-stop1-pos variables.$transition-fast ease,
+                --btn-grad-stop2-pos variables.$transition-medium ease,
+                --btn-grad-stop3-pos variables.$transition-longest ease;   
+
             &:hover {
-
-
+                --btn-grad-angle: #{variables.$hover-btn-grad-angle}; 
+                --btn-grad-stop1-pos: #{variables.$hover-btn-grad-stop1-pos};
+                --btn-grad-stop2-pos: #{variables.$hover-btn-grad-stop2-pos};
+                --btn-grad-stop3-pos: #{variables.$hover-btn-grad-stop3-pos};
             }
         }
+
 
         // Secondary
         &.btn-secondary {
@@ -57,11 +73,8 @@ a {
             background: variables.$clr-primary;
             border: .1rem solid variables.$clr-white;
 
-            &:hover {
-
-
-            }
-        }  
+            &:hover {}
+        }
 
         // Quaternary
         &.btn-tertiary {
@@ -69,10 +82,7 @@ a {
             color: variables.$btn-tertiary-color;
             background: variables.$btn-tertiary-backgroundColor;
 
-            &:hover {
-
-
-            }            
+            &:hover {}
         }
 
         // Buttons with icons

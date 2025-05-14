@@ -1,6 +1,6 @@
 <template>
     <HeroSimple 
-        title="Experience" 
+        title="Projekte" 
         buttonText="Learn More" 
         buttonUrl="/about" 
     />

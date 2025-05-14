@@ -25,17 +25,22 @@
             a:not(.btn) {
 
                 padding: variables.$navbar-linkPadding;
-                color: variables.$navbar-linkColor;
 
                 // Add a bit of top offset to center it correctly
                 position: relative;
                 top: 2px;
-                transition: variables.$transition-fast opacity ease-in-out;
 
-                // Current link
+                // Color using linear-gradient
+                -webkit-background-clip: text; 
+                background-clip: text;         
+                color: transparent; 
+
+                transition: background-image variables.$transition-fast ease-in-out;
+                background-image: linear-gradient(variables.$clr-white);
+
                 &.current {
 
-                    opacity: .7;
+                    background-image: variables.$gradient-primary;
                 }
             }
 

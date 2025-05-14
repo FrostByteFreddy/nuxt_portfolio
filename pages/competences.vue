@@ -1,6 +1,6 @@
 <template>
     <HeroSimple 
-        title="Work"
+        title="Kompezenzen"
         text="This is some descriptive text about your project. Some descriptive text about your project."
         buttonText="Learn More" 
         buttonUrl="/about"

@@ -22,10 +22,10 @@ export default {
         return {
             open: false,
             links: [
-                { to: "/", name: "Home" },
                 { to: "/about", name: "About" },
-                { to: "/work", name: "Work" },
-                { to: "/contact", name: "Contact", class: "btn btn-secondary"},
+                { to: "/competences", name: "Kompetenzen" },
+                { to: "/projects", name: "Projekte" },
+                { to: "/contact", name: "Kontakt aufnehmen", class: "btn btn-secondary"},
             ],
         };
     },
