@@ -1,0 +1,20 @@
+@use 'variables';
+@use 'mixins';
+
+.align {
+
+    &-start {
+
+        align-content: flex-start;
+    }
+
+    &-center {
+
+        align-content: center;
+    }
+
+    &-end {
+
+        align-content: flex-end;
+    }
+}

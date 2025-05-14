@@ -1,0 +1,10 @@
+@use '../variables';
+@use '../mixins';
+
+section[data-component="textmedia"] {
+
+    p {
+
+        color: variables.$clr-white;
+    }
+}

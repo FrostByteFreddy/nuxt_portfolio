@@ -8,7 +8,7 @@
                     <a v-if="buttonText && buttonUrl" :href="buttonUrl" :class="buttonClasses">{{ buttonText }}</a>
                 </div>
                 <div class="col-md-6 col-12">
-                    <img alt="" :src=textMediaImage />
+                    <img alt="" :src=heroImage />
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@ export default {
         text: {
             type: String,
         },
-        textMediaImage: {
+        heroImage: {
             type: String,
             default: ''
         },

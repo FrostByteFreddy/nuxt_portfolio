@@ -9,5 +9,14 @@ h2,
     font-weight: variables.$h2-fontWeight;
     line-height: variables.$h2-lineHeight;
 
-    color: variables.$h2-color;
+    background-image: linear-gradient(
+        145deg, // Assuming a default angle, adjust if needed or make it a variable
+        variables.$gradient-color-1 variables.$initial-btn-grad-stop1-pos,
+        variables.$gradient-color-2 variables.$initial-btn-grad-stop2-pos,
+        variables.$gradient-color-3 variables.$initial-btn-grad-stop3-pos
+    );
+
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
 }
