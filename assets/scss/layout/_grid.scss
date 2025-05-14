@@ -1,5 +1,6 @@
-@use '../variables';
-@use '../mixins';
+@use "sass:map";
+@use "../mixins";
+@use "../variables";
 
 ///////////////////////////////////////////////
 // Simplified Version of Bootstrap Grid
@@ -12,11 +13,23 @@
     flex-wrap: wrap;
 
     // Set the custom property to the default gutter size.
-    --gutter-x: #{map-get(variables.$grid-spacing, 0)};
-    --gutter-y: #{map-get(variables.$grid-spacing, 0)};
+    --gutter-x: #{map.get(variables.$grid-spacing, 0)};
+    --gutter-y: #{map.get(variables.$grid-spacing, 0)};
 
     margin-right: calc(var(--gutter-x) * -.5);
     margin-left: calc(var(--gutter-x) * -.5);
+
+    // Center cols
+    &.justify-center {
+
+        justify-content: center;
+    }
+
+    // Align cols on right
+    &.justify-end {
+
+        justify-content: flex-end;
+    }
   
     @each $index, $size in variables.$grid-spacing {
 
@@ -27,6 +40,11 @@
         &.gy-#{$index} {
             --gutter-y: #{$size};
         }   
+
+        &.g-#{$index} {
+            --gutter-x: #{$size};
+            --gutter-y: #{$size};
+        }
     }
 }
   
@@ -35,8 +53,8 @@
 
     .col-#{$i} { 
 
-        flex: 0 0 calc((100% / 12 * #{$i}) - var(--gutter-x)); 
-        max-width: calc((100% / 12 * #{$i}) - var(--gutter-x)); 
+        flex: 0 0 calc((100% / 12 * $i) - var(--gutter-x)); 
+        max-width: calc((100% / 12 * $i) - var(--gutter-x)); 
 
         padding-right: calc(var(--gutter-x) * .5);
         padding-left: calc(var(--gutter-x) * .5);
@@ -52,8 +70,8 @@
         
         .col-sm-#{$i} {
 
-            flex: 0 0 calc((100% / 12 * #{$i}) - var(--gutter-x)); 
-            max-width: calc((100% / 12 * #{$i}) - var(--gutter-x)); 
+            flex: 0 0 calc((100% / 12 * $i) - var(--gutter-x)); 
+            max-width: calc((100% / 12 * $i) - var(--gutter-x)); 
 
             padding-right: calc(var(--gutter-x) * .5);
             padding-left: calc(var(--gutter-x) * .5);
@@ -70,8 +88,8 @@
 
         .col-md-#{$i} {
 
-            flex: 0 0 calc((100% / 12 * #{$i}) - var(--gutter-x)); 
-            max-width: calc((100% / 12 * #{$i}) - var(--gutter-x)); 
+            flex: 0 0 calc((100% / 12 * $i) - var(--gutter-x)); 
+            max-width: calc((100% / 12 * $i) - var(--gutter-x)); 
 
             padding-right: calc(var(--gutter-x) * .5);
             padding-left: calc(var(--gutter-x) * .5);
@@ -88,8 +106,8 @@
 
         .col-lg-#{$i} {
 
-            flex: 0 0 calc((100% / 12 * #{$i}) - var(--gutter-x)); 
-            max-width: calc((100% / 12 * #{$i}) - var(--gutter-x)); 
+            flex: 0 0 calc((100% / 12 * $i) - var(--gutter-x)); 
+            max-width: calc((100% / 12 * $i) - var(--gutter-x)); 
 
             padding-right: calc(var(--gutter-x) * .5);
             padding-left: calc(var(--gutter-x) * .5);
@@ -106,8 +124,8 @@
 
         .col-xl-#{$i} {
             
-            flex: 0 0 calc((100% / 12 * #{$i}) - var(--gutter-x)); 
-            max-width: calc((100% / 12 * #{$i}) - var(--gutter-x)); 
+            flex: 0 0 calc((100% / 12 * $i) - var(--gutter-x)); 
+            max-width: calc((100% / 12 * $i) - var(--gutter-x)); 
 
             padding-right: calc(var(--gutter-x) * .5);
             padding-left: calc(var(--gutter-x) * .5);
