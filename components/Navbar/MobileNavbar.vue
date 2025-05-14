@@ -1,11 +1,10 @@
 <template>
     <div data-device="mobile" :class="{ active: !isMenuHidden }">
         <a href="#" class="nav-logo">
-            <img class="nav-logo-img" src="~/static/images/logo_example.svg"
-                alt="SASS Logo">
+            <img class="nav-logo-img" src="~/static/images/logo_example.svg" alt="SASS Logo">
         </a>
 
-        <a id="burger-menu" @click="toggleMenu" role="button" aria-expanded="isMenuHidden ? 'false' : 'true'" aria-controls="mobile-menu-list">
+        <a id="burger-menu" @click="toggleMenu" role="button" :aria-expanded="isMenuHidden ? 'false' : 'true'" aria-controls="mobile-menu-list">
             <span data-id="1" class="burger-menu-bar"></span>
             <span data-id="2" class="burger-menu-bar"></span>
             <span data-id="3" class="burger-menu-bar"></span>
