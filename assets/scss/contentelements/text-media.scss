@@ -8,9 +8,66 @@ section[data-component="textmedia"] {
         color: variables.$clr-white;
     }
 
-    // Special intro section with shadow that looks like a window of some sort
-    .intro {
+    .image-wrapper {
 
-        
+
+    }
+
+    .text-wrapper {
+
+
+    }
+
+    // Special intro section with shadow that looks like a window of some sort
+    &.intro {
+
+        position: relative;
+
+        .image-wrapper {
+
+            position: relative;
+            box-shadow: inset 0px -28px 40px -20px #000000;
+
+            img {
+
+                width: 80%;
+                height: 80%;
+                margin: auto;
+                padding-top: 50px;
+                display: flex;
+                align-self: center;
+                position: relative;
+            }
+
+            // Window
+            &::after {
+
+                content: "";
+                position: absolute;
+                left: 0;
+                background-color: white;
+                top: 0;
+                bottom: 20%;
+                right: 10%;
+                z-index: -1;
+                border-radius: 50px;
+                opacity: .1;
+                
+                background: linear-gradient(145deg, variables.$clr-white, variables.$clr-black);
+            }
+
+            // Fade out bottom
+            &::before {
+
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 70%;
+                background: linear-gradient(variables.$clr-transparent, variables.$clr-black);
+                z-index: 1;
+            }
+        }
     }
 }

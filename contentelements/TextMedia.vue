@@ -5,22 +5,24 @@
             <div class="row g-5">
 
                 <div class="col-md-6 col-12 align-center" v-if="imagePos === 'left'">
-                    <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
-                    <div v-else>
+                    <div class="image-wrapper">
+                        <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
                     </div>
                 </div>
 
                 <div class="col-md-6 col-12 align-center">
-                    <div v-if="titleHtml" v-html="titleHtml"></div>
-                    <div v-if="text" v-html="text"></div>
-                    <a v-if="buttonText && buttonUrl" :href="buttonUrl" :class="buttonClasses">
-                        {{ buttonText }}
-                    </a>
+                    <div class="text-wrapper">
+                        <div v-if="titleHtml" v-html="titleHtml"></div>
+                        <div v-if="text" v-html="text"></div>
+                        <a v-if="buttonText && buttonUrl" :href="buttonUrl" :class="buttonClasses">
+                            {{ buttonText }}
+                        </a>
+                    </div>
                 </div>
 
                 <div class="col-md-6 col-12 align-center" v-if="imagePos === 'right'">
-                    <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
-                    <div v-else>
+                    <div class="image-wrapper">
+                        <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
                     </div>
                 </div>
 
