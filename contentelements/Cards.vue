@@ -1,8 +1,8 @@
 <template>
     <section :class="['card-grid-section', additionalClasses]" data-component="cards"
         :style="{ 'background-image': backgroundImage ? `url(${backgroundImage})` : null }">
-        <div class="container py-5">
-            <div class="row mb-4 mb-md-5" v-if="title || text">
+        <div class="container-narrow">
+            <div class="row g-3" v-if="title || text">
                 <div class="col-12 text-center">
                     <h2 v-if="title" v-html="title" class="section-title"></h2>
                     <p v-if="text" v-html="text" class="section-text lead"></p>
@@ -11,12 +11,12 @@
 
             <div class="row g-4">
                 <div v-for="(card, index) in cards" :key="index"
-                    class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch">
-                    <div :class="['card h-100 w-100', card.customClass]"> {/* Apply customClass here */}
-                        <div class="card-body d-flex flex-column text-center">
-                            <div v-if="card.svgCode" class="card-icon mx-auto mb-3" v-html="card.svgCode"></div>
-                            <h5 v-if="card.title" class="card-title fw-bold">{{ card.title }}</h5>
-                            <p v-if="card.text" class="card-text flex-grow-1">{{ card.text }}</p>
+                    class="col-md-4 col-12">
+                    <div :class="['card', card.customClass]">
+                        <div class="card-inner">
+                            <div v-if="card.svgCode" class="card-icon" v-html="card.svgCode"></div>
+                            <h5 v-if="card.title" class="card-title">{{ card.title }}</h5>
+                            <p v-if="card.text" class="card-text">{{ card.text }}</p>
                             <a v-if="card.buttonText && card.buttonUrl" :href="card.buttonUrl"
                                 :class="card.buttonClasses || 'btn btn-primary mt-auto'">
                                 {{ card.buttonText }}

@@ -42,10 +42,10 @@
 
     &-narrow {
 
-        // 2DO: Use a layout field instead to align the content centered, flex-start or flex-end
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        margin: auto;
 
         @include mixins.above('lg') {
 

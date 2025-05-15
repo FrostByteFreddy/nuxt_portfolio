@@ -66,15 +66,14 @@ export default {
                 // btnClasses: 'btn btn-secondary mt-5',
                 customSectionClasses: 'intro',
             },
-            // Data for the Cards component
             cardGridData: {
                 title: '<h2>Services</h2>',
-                text: '<p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>',
+                text: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>',
                 cards: [
                     {
                         title: 'SEO',
-                        customClass: 'card-style-seo', // Add your custom CSS class for styling
-                        svgCode: '<svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#fff;}</style></defs><rect class="cls-1" x="10" y="30" width="15" height="50"/><rect class="cls-1" x="30" y="10" width="15" height="70"/><rect class="cls-1" x="50" y="40" width="15" height="40"/><rect class="cls-1" x="70" y="20" width="15" height="60"/></svg>', // Replace with your actual SVG
+                        customClass: 'card-style-seo', 
+                        svgCode: '', 
                         text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
                         // buttonText: 'More on SEO',
                         // buttonUrl: '/services/seo',
@@ -82,22 +81,22 @@ export default {
                     },
                     {
                         title: 'Hosting',
-                        customClass: 'card-style-hosting', // Add your custom CSS class for styling
-                        svgCode: '<svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#fff;}</style></defs><rect class="cls-1" x="10" y="30" width="15" height="50"/><rect class="cls-1" x="30" y="10" width="15" height="70"/><rect class="cls-1" x="50" y="40" width="15" height="40"/><rect class="cls-1" x="70" y="20" width="15" height="60"/></svg>', // Replace with your actual SVG
+                        customClass: 'card-style-hosting',
+                        svgCode: '', 
                         text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
                         // buttonText: 'Hosting Plans',
                         // buttonUrl: '/services/hosting'
                     },
                     {
                         title: 'Entwicklung',
-                        customClass: 'card-style-entwicklung', // Add your custom CSS class for styling
-                        svgCode: '<svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#fff;}</style></defs><rect class="cls-1" x="10" y="30" width="15" height="50"/><rect class="cls-1" x="30" y="10" width="15" height="70"/><rect class="cls-1" x="50" y="40" width="15" height="40"/><rect class="cls-1" x="70" y="20" width="15" height="60"/></svg>', // Replace with your actual SVG
+                        customClass: 'card-style-entwicklung',
+                        svgCode: '', 
                         text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text has been the.",
                         // buttonText: 'Our Process',
                         // buttonUrl: '/services/entwicklung'
                     }
                 ],
-                additionalClasses: 'py-5 bg-light-gray' // Optional: e.g. 'services-section py-5'
+                additionalClasses: 'py-5 bg-light-gray'
             }
         };
     },
