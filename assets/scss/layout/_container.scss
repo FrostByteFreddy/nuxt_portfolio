@@ -10,11 +10,16 @@
     width: variables.$container-maxWidthDesktop;
     margin: auto;
     padding: 0 variables.$container-padding;
-    overflow: hidden;
+    overflow: visible;
 
     &-fluid {
 
         width: 100%;
+    }
+
+    @include mixins.below('lg'){
+
+        overflow: hidden;
     }
 
     @include mixins.below('xl') {

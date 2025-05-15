@@ -16,7 +16,7 @@ section {
         $section-heroActualHeightDesktop: calc((#{variables.$section-heroHeight} - 2 * #{variables.$section-heroVerticalPadding}) - #{variables.$header-heightDesktopMaximized});
         min-height: $section-heroActualHeightDesktop;
 
-        @include mixins.background-image(cover); // Include background-image cover
+        // @include mixins.background-image(cover); // Include background-image cover
         
         h1, .h1,
         h2, .h2,
@@ -52,6 +52,30 @@ section {
 
             $section-heroActualHeightMobile: calc(#{variables.$section-heroHeight} - 2 * #{variables.$section-heroVerticalPadding} - #{variables.$header-heightMobileMaximized});
             min-height: $section-heroActualHeightMobile;
+        }
+
+        .col-12:has(img) {
+
+            position: relative;
+
+            // Image Background
+            &::after {
+
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 47.5%;
+                width: 175%;
+                height: 175%;
+                background: radial-gradient(circle,rgba(33, 33, 33, 100) 0%, rgba(255, 255, 255, 0) 60%);
+                background: radial-gradient(
+                    ellipse,
+                    rgba(33, 33, 33, 1) 0%,    
+                    rgba(255, 255, 255, 0) 60% 
+                );
+                z-index: -1;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 }
