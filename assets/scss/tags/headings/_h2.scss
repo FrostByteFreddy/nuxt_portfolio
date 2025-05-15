@@ -11,9 +11,9 @@ h2,
 
     background-image: linear-gradient(
         145deg, // Assuming a default angle, adjust if needed or make it a variable
-        variables.$gradient-color-1 variables.$initial-btn-grad-stop1-pos,
-        variables.$gradient-color-2 variables.$initial-btn-grad-stop2-pos,
-        variables.$gradient-color-3 variables.$initial-btn-grad-stop3-pos
+        variables.$gradient-color-1 variables.$initial-grad-stop1-pos,
+        variables.$gradient-color-2 variables.$initial-grad-stop2-pos,
+        variables.$gradient-color-3 variables.$initial-grad-stop3-pos
     );
 
     -webkit-background-clip: text; 

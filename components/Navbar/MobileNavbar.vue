@@ -17,7 +17,7 @@
                 </nuxt-link>
             </li>
             <li class="nav-menu-link">
-                <a href="#" class="btn primary">Contact</a>
+                <a href="#" class="btn btn-primary mt-5">Contact</a>
             </li>
         </ul>
     </div>

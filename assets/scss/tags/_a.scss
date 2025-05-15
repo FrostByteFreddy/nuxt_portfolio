@@ -40,10 +40,10 @@ a {
             color: variables.$btn-primary-color;
             font-size: variables.$btn-primary-fontSize;
 
-            --btn-grad-angle:     #{variables.$initial-btn-grad-angle};
-            --btn-grad-stop1-pos: #{variables.$initial-btn-grad-stop1-pos};
-            --btn-grad-stop2-pos: #{variables.$initial-btn-grad-stop2-pos};
-            --btn-grad-stop3-pos: #{variables.$initial-btn-grad-stop3-pos};
+            --btn-grad-angle:     #{variables.$initial-grad-angle};
+            --btn-grad-stop1-pos: #{variables.$initial-grad-stop1-pos};
+            --btn-grad-stop2-pos: #{variables.$initial-grad-stop2-pos};
+            --btn-grad-stop3-pos: #{variables.$initial-grad-stop3-pos};
 
             background: linear-gradient(
                     var(--btn-grad-angle),
@@ -58,7 +58,7 @@ a {
                 --btn-grad-stop3-pos variables.$transition-longest ease;   
 
             &:hover {
-                --btn-grad-angle: #{variables.$hover-btn-grad-angle}; 
+                --btn-grad-angle: #{variables.$hover-grad-angle}; 
                 --btn-grad-stop1-pos: #{variables.$hover-btn-grad-stop1-pos};
                 --btn-grad-stop2-pos: #{variables.$hover-btn-grad-stop2-pos};
                 --btn-grad-stop3-pos: #{variables.$hover-btn-grad-stop3-pos};

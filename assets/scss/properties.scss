@@ -5,23 +5,23 @@
 @property --btn-grad-angle {
     syntax: '<angle>';
     inherits: false;
-    initial-value: #{variables.$initial-btn-grad-angle};
+    initial-value: #{variables.$initial-grad-angle};
 }
 
 @property --btn-grad-stop1-pos {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: #{variables.$initial-btn-grad-stop1-pos};
+    initial-value: #{variables.$initial-grad-stop1-pos};
 }
 
 @property --btn-grad-stop2-pos {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: #{variables.$initial-btn-grad-stop2-pos};
+    initial-value: #{variables.$initial-grad-stop2-pos};
 }
 
 @property --btn-grad-stop3-pos {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: #{variables.$initial-btn-grad-stop3-pos};
+    initial-value: #{variables.$initial-grad-stop3-pos};
 }
