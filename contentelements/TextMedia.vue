@@ -1,44 +1,37 @@
 <template>
-    <section :class="additionalClasses" data-component="textmedia"
-        :style="{ 'background-image': backgroundImage ? `url(${backgroundImage})` : null }">
-        <div class="container">
-            <div class="row g-5">
+    <div class="container" data-component="textmedia">
+        <div class="row g-5">
 
-                <div class="col-md-6 col-12 align-center" v-if="imagePos === 'left'">
-                    <div class="image-wrapper">
-                        <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
-                    </div>
+            <div class="col-md-6 col-12 align-center" v-if="imagePos === 'left'">
+                <div class="image-wrapper">
+                    <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
                 </div>
-
-                <div class="col-md-6 col-12 align-center">
-                    <div class="text-wrapper">
-                        <div v-if="titleHtml" v-html="titleHtml"></div>
-                        <div v-if="text" v-html="text"></div>
-                        <a v-if="buttonText && buttonUrl" :href="buttonUrl" :class="buttonClasses">
-                            {{ buttonText }}
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-12 align-center" v-if="imagePos === 'right'">
-                    <div class="image-wrapper">
-                        <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
-                    </div>
-                </div>
-
             </div>
+
+            <div class="col-md-6 col-12 align-center">
+                <div class="text-wrapper">
+                    <div v-if="titleHtml" v-html="titleHtml"></div>
+                    <div v-if="text" v-html="text"></div>
+                    <a v-if="buttonText && buttonUrl" :href="buttonUrl" :class="buttonClasses">
+                        {{ buttonText }}
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 align-center" v-if="imagePos === 'right'">
+                <div class="image-wrapper">
+                    <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
 </template>
 
 <script>
 export default {
     name: 'TextMedia',
     props: {
-        backgroundImage: {
-            type: String,
-            default: ''
-        },
         titleHtml: {
             type: String,
             default: ''
@@ -66,10 +59,6 @@ export default {
         buttonClasses: {
             type: String,
             default: 'btn mt-4'
-        },
-        additionalClasses: {
-            type: [String, Array],
-            default: ''
         },
         imagePos: {
             type: String,

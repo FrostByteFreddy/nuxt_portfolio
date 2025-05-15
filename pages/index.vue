@@ -1,38 +1,49 @@
 <template>
     <div id="app-parent-container">
-        <HeroSimple
-            :heroImage="heroSimpleData.image"
-            :title="heroSimpleData.title"
-            :text="heroSimpleData.text"
-            :buttonText="heroSimpleData.buttonText"
-            :buttonClasses="heroSimpleData.buttonClasses"
-            :buttonUrl="heroSimpleData.buttonUrl"
-        />
+        <LayoutSection additionalClasses="background-black hero-simple" componentType="hero">
+            <HeroSimple
+                :heroImage="heroSimpleData.image"
+                :title="heroSimpleData.title"
+                :text="heroSimpleData.text"
+                :buttonText="heroSimpleData.buttonText"
+                :buttonClasses="heroSimpleData.buttonClasses"
+                :buttonUrl="heroSimpleData.buttonUrl"
+            />
+        </LayoutSection>
 
-        <TextMedia
+        <LayoutSection
             :backgroundImage="textMediaData.bgImage"
-            :titleHtml="textMediaData.title"
-            :text="textMediaData.description"
-            :imageSrc="textMediaData.imgSrc"
-            :imageAlt="textMediaData.imgAlt"
-            :buttonText="textMediaData.btnText"
-            :buttonUrl="textMediaData.btnUrl"
-            :buttonClasses="textMediaData.btnClasses"
             :additionalClasses="textMediaData.customSectionClasses"
-            :imagePos="textMediaData.imagePos" />
+            componentType="textmedia"
+        >
+            <TextMedia
+                :titleHtml="textMediaData.title"
+                :text="textMediaData.description"
+                :imageSrc="textMediaData.imgSrc"
+                :imageAlt="textMediaData.imgAlt"
+                :buttonText="textMediaData.btnText"
+                :buttonUrl="textMediaData.btnUrl"
+                :buttonClasses="textMediaData.btnClasses"
+                :imagePos="textMediaData.imagePos" />
+        </LayoutSection>
 
-        <Cards
-            :title="cardGridData.title"
-            :text="cardGridData.text"
-            :cards="cardGridData.cards"
+        <LayoutSection
             :backgroundImage="cardGridData.backgroundImage"
             :additionalClasses="cardGridData.additionalClasses"
-        />
+            componentType="cards"
+        >
+            <Cards
+                :title="cardGridData.title"
+                :text="cardGridData.text"
+                :cards="cardGridData.cards"
+            />
+        </LayoutSection>
     </div>
 </template>
 
 <script>
 // Import components
+import LayoutSection from '~/components/layout/Section.vue';
 import HeroSimple from '../ContentElements/Hero/HeroSimple.vue';
 import TextMedia from '../ContentElements/TextMedia.vue';
 import Cards from '../ContentElements/Cards.vue'; // Assuming your CardGrid component is named Cards.vue here
@@ -40,6 +51,7 @@ import Cards from '../ContentElements/Cards.vue'; // Assuming your CardGrid comp
 export default {
     name: 'App',
     components: {
+        LayoutSection,
         HeroSimple,
         TextMedia,
         Cards,
