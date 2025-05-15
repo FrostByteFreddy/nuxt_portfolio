@@ -20,6 +20,14 @@
             :buttonClasses="textMediaData.btnClasses"
             :additionalClasses="textMediaData.customSectionClasses"
             :imagePos="textMediaData.imagePos" />
+
+        <Cards
+            :title="cardGridData.title"
+            :text="cardGridData.text"
+            :cards="cardGridData.cards"
+            :backgroundImage="cardGridData.backgroundImage"
+            :additionalClasses="cardGridData.additionalClasses"
+        />
     </div>
 </template>
 
@@ -27,12 +35,14 @@
 // Import components
 import HeroSimple from '../ContentElements/Hero/HeroSimple.vue';
 import TextMedia from '../ContentElements/TextMedia.vue';
+import Cards from '../ContentElements/Cards.vue'; // Assuming your CardGrid component is named Cards.vue here
 
 export default {
     name: 'App',
     components: {
         HeroSimple,
         TextMedia,
+        Cards,
     },
     data() {
         return {
@@ -45,7 +55,7 @@ export default {
                 buttonUrl: '/about',
             },
             textMediaData: {
-                imagePos: 'left', 
+                imagePos: 'left',
                 bgImage: '',
                 title: '<h2>Hello and Welcome!</h2>',
                 description: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>',
@@ -56,6 +66,39 @@ export default {
                 // btnClasses: 'btn btn-secondary mt-5',
                 customSectionClasses: 'intro',
             },
+            // Data for the Cards component
+            cardGridData: {
+                title: '<h2>Services</h2>',
+                text: '<p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>',
+                cards: [
+                    {
+                        title: 'SEO',
+                        customClass: 'card-style-seo', // Add your custom CSS class for styling
+                        svgCode: '<svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#fff;}</style></defs><rect class="cls-1" x="10" y="30" width="15" height="50"/><rect class="cls-1" x="30" y="10" width="15" height="70"/><rect class="cls-1" x="50" y="40" width="15" height="40"/><rect class="cls-1" x="70" y="20" width="15" height="60"/></svg>', // Replace with your actual SVG
+                        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                        // buttonText: 'More on SEO',
+                        // buttonUrl: '/services/seo',
+                        // buttonClasses: 'btn btn-light btn-sm'
+                    },
+                    {
+                        title: 'Hosting',
+                        customClass: 'card-style-hosting', // Add your custom CSS class for styling
+                        svgCode: '<svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#fff;}</style></defs><rect class="cls-1" x="10" y="30" width="15" height="50"/><rect class="cls-1" x="30" y="10" width="15" height="70"/><rect class="cls-1" x="50" y="40" width="15" height="40"/><rect class="cls-1" x="70" y="20" width="15" height="60"/></svg>', // Replace with your actual SVG
+                        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+                        // buttonText: 'Hosting Plans',
+                        // buttonUrl: '/services/hosting'
+                    },
+                    {
+                        title: 'Entwicklung',
+                        customClass: 'card-style-entwicklung', // Add your custom CSS class for styling
+                        svgCode: '<svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#fff;}</style></defs><rect class="cls-1" x="10" y="30" width="15" height="50"/><rect class="cls-1" x="30" y="10" width="15" height="70"/><rect class="cls-1" x="50" y="40" width="15" height="40"/><rect class="cls-1" x="70" y="20" width="15" height="60"/></svg>', // Replace with your actual SVG
+                        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text has been the.",
+                        // buttonText: 'Our Process',
+                        // buttonUrl: '/services/entwicklung'
+                    }
+                ],
+                additionalClasses: 'py-5 bg-light-gray' // Optional: e.g. 'services-section py-5'
+            }
         };
     },
 };

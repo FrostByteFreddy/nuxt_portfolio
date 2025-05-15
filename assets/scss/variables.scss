@@ -3,6 +3,7 @@
 ///////////////////////////////////////////////
 
 $clr-black: #000000;
+$clr-darkGray: rgba(20, 20, 20, 1);
 $clr-white: #ffffff;
 $clr-transparent: transparent;
 
@@ -117,8 +118,8 @@ $h1-fontFamily: $ff-secondary;
 
 // Heading 2
 $h2-color: $clr-white;
-$h2-fontSize: 3.5rem;
-$h2-fontWeight: 500;
+$h2-fontSize: 4.5rem;
+$h2-fontWeight: 600;
 $h2-lineHeight: $headings-lineHeight;
 $h2-fontFamily: $ff-main;
 
@@ -154,13 +155,13 @@ $transition-longest: 500ms;
 // Paragraphs (prefix p)
 $p-color: $clr-white;
  
-$p-fontSize: 1rem; // 16px
+$p-fontSize: 1.15rem; // 16px
 $p-lineHeight: 1.5;
 $p-fontWeight: normal;
 $p-fontFamily: $ff-main;
 $p-consecutiveMarginTop: 1rem; // p + p
 
-$p-lead-fontSize: calc(#{$p-fontSize * 1.5});
+$p-lead-fontSize: 1.5rem;
 $p-lead-fontWeight: normal;
 $p-lead-color: $clr-primary;
 

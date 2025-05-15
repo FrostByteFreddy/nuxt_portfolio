@@ -1,5 +1,5 @@
-@use '../variables';
-@use '../mixins';
+@use "../mixins";
+@use "../variables";
 
 ///////////////////////////////////////////////
 // Containers
@@ -10,20 +10,46 @@
     width: variables.$container-maxWidthDesktop;
     margin: auto;
     padding: 0 variables.$container-padding;
-    overflow: visible;
+    position: relative;
 
-    &-fluid {
+    // Nested container
+    .container {
 
-        width: 100%;
+        margin: auto;
     }
 
-    @include mixins.below('lg'){
+    @include mixins.below('md'){
 
         overflow: hidden;
     }
 
-    @include mixins.below('xl') {
+    @include mixins.below('xxl') {
 
         max-width: variables.$container-maxWidthMobile;
+    }
+
+    &-fullWidth {
+
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        @include mixins.below('xxl') {
+
+            max-width: 100vw;
+        }
+    }
+
+    &-narrow {
+
+        // 2DO: Use a layout field instead to align the content centered, flex-start or flex-end
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include mixins.above('lg') {
+
+            max-width: calc(#{variables.$container-maxWidthDesktop} * .666);
+        }
     }
 }

@@ -8,6 +8,7 @@
 p {
 
     margin: 0;
+    font-size: variables.$p-fontSize;
     line-height: variables.$p-lineHeight;
 
     & + p {

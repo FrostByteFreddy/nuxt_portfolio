@@ -51,9 +51,13 @@ section[data-component="textmedia"] {
                 right: 10%;
                 z-index: -1;
                 border-radius: 50px;
-                opacity: .1;
                 
-                background: linear-gradient(145deg, variables.$clr-white, variables.$clr-black);
+                background: linear-gradient(145deg, variables.$clr-darkGray, variables.$clr-black);
+
+                @include mixins.below('md'){
+
+                    right: 0;
+                }
             }
 
             // Fade out bottom
