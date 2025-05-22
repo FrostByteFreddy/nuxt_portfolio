@@ -59,7 +59,7 @@ export default {
     data() {
         return {
             heroSimpleData: {
-                image: '/images/hero.png',
+                image: '/_nuxt/static/images/hero.png',
                 title: '<h1>Erfolg Messbar Machen</h1>',
                 text: "<p class='lead'>Ihr Freelancer für IT-Projekte im Raum Bern, von Wordpress über CraftCMS und moderne JS-Frameworks bis hin zu Typo3</p>",
                 buttonText: 'Kontakt aufnehmen',
@@ -71,7 +71,7 @@ export default {
                 bgImage: '',
                 title: '<h2>Hello and Welcome!</h2>',
                 description: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>',
-                imgSrc: '/images/Moritz.png',
+                imgSrc: '/_nuxt/static/images/Moritz.png',
                 imgAlt: 'Moritz Burn - Freelancer in Thun',
                 // btnText: 'Get Started Now',
                 // btnUrl: '/signup',

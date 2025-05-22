@@ -33,6 +33,7 @@ export default {
   },
 
   css: [
+    '~/assets/scss/main.scss'
   ],
 
   plugins: [
@@ -44,7 +45,6 @@ export default {
   ],
 
   modules: [
-    '@nuxtjs/style-resources',
   ],
 
   build: {

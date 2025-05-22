@@ -2,7 +2,7 @@
     <div>
         <Navbar />
         <main>
-            <nuxt />
+            <NuxtPage />
         </main>
         <Footer />
 

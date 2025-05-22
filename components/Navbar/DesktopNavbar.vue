@@ -1,7 +1,7 @@
 <template>
     <div data-device="desktop">
         <a href="/" class="nav-logo">
-            <img class="nav-logo-img" src="~/static/images/logo_example.svg" />
+            <img class="nav-logo-img" src="/static/images/logo_example.svg" />
         </a>
         <ul class="nav-menu-links">
             <li v-for="link in links" :key="link.name" class="nav-menu-link">
