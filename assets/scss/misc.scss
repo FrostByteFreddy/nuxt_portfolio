@@ -1,0 +1,65 @@
+@use "variables";
+
+//////////////////////////////////////////
+// View-Transitions
+//////////////////////////////////////////
+// https://www.youtube.com/watch?v=quvE1uu1f_I&t=319s
+
+@view-transition {
+
+    navigation: auto;
+}
+
+/* Fade-animations */
+@keyframes move-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes move-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+// Create view-transitions
+::view-transition-old(main),
+::view-transition-old(footer) { 
+    animation: 0.4s ease-out both move-out;
+}
+
+::view-transition-new(main), 
+::view-transition-new(footer) {
+    animation: 0.4s ease-out both move-in;
+    animation-delay: 0.2s;
+}
+
+// Apply
+header {view-transition-name: header;}
+main {view-transition-name: main;}
+footer {view-transition-name: footer;}
+
+
+//////////////////////////////////////////
+// When selecting text 
+//////////////////////////////////////////
+::selection {
+
+    background-color: variables.$clr-primaryLight;
+    color: variables.$clr-white;
+}
+
+::-moz-selection {
+
+    background-color: variables.$clr-primaryLight;
+    color: variables.$clr-white;
+}
