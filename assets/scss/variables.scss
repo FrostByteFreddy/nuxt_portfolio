@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 ///////////////////////////////////////////////
 // Colors and Fonts
 ///////////////////////////////////////////////
@@ -13,9 +15,9 @@ $clr-secondary: #6f42c1;
 $clr-tertiary:  $clr-white; 
 
 // Lighter shades (might result in white if the percentage is too hight)
-$clr-primaryLight: lighten($clr-primary, 30%); // Adjust percentage for desired lightness
-$clr-secondaryLight: lighten($clr-secondary, 20%);
-$clr-tertiaryLight: lighten($clr-tertiary, 20%);
+$clr-primaryLight: color.adjust($clr-primary, $lightness: 30%);
+$clr-secondaryLight: color.adjust($clr-secondary, $lightness: 20%);
+$clr-tertiaryLight: color.adjust($clr-tertiary, $lightness: 20%);
 
 // Font-Families (prefix ff)
 $ff-main: 'Montserrat';

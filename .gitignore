@@ -90,4 +90,4 @@ sw.*
 *.swp
 
 # Custom asets
-assts/compiled
+assets/compiled/
