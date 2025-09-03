@@ -26,7 +26,7 @@ jobs:
 
       # 3. Install project dependencies
       - name: Install Dependencies
-        run: npm ci
+        run: npm i
 
       # 4. Generate the static site
       - name: Build Static Site
