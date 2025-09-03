@@ -1,0 +1,1 @@
+import{H as e}from"./ptoOXFOI.js";import{_ as t,g as r,r as n,o as s}from"./CpP2Yxmz.js";const c={components:{HeroSimple:e}};function p(a,m,_,i,l,f){const o=n("HeroSimple");return s(),r(o,{title:"Projekte",buttonText:"Learn More",buttonUrl:"/about"})}const x=t(c,[["render",p]]);export{x as default};
