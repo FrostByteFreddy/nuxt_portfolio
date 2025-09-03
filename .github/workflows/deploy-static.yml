@@ -28,6 +28,9 @@ jobs:
       - name: Install Dependencies
         run: npm i
 
+      - name: Check nuxt version
+        run: npx nuxt --version
+
       # 4. Generate the static site
       - name: Build Static Site
         run: npx nuxi generate
