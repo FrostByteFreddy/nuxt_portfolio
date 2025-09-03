@@ -7,6 +7,11 @@
 
 section {
 
+    & + section {
+
+        margin-top: 4rem;
+    }
+
     // Space Before
     @each $name, $size in variables.$vertical-spacing {
 

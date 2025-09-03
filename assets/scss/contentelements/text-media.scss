@@ -3,11 +3,6 @@
 
 section[data-component="textmedia"] {
 
-    p {
-
-        color: variables.$clr-white;
-    }
-
     .image-wrapper {
 
 
@@ -22,6 +17,15 @@ section[data-component="textmedia"] {
     &.intro {
 
         position: relative;
+
+        .row {
+
+              // Image below for mobile
+            @include mixins.below('md') {
+
+                flex-direction: row-reverse;
+            }
+        }
 
         .image-wrapper {
 

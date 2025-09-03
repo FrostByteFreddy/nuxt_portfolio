@@ -70,7 +70,7 @@ export default {
                 imagePos: 'left',
                 bgImage: '',
                 title: '<h2>Hello and Welcome!</h2>',
-                description: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>',
+                description: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book..</p>',
                 imgSrc: '/_nuxt/static/images/Moritz.png',
                 imgAlt: 'Moritz Burn - Freelancer in Thun',
                 // btnText: 'Get Started Now',
@@ -79,13 +79,13 @@ export default {
                 customSectionClasses: 'intro',
             },
             cardGridData: {
-                title: '<h2>Services</h2>',
-                text: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>',
+                title: 'Services',
+                text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
                 cards: [
                     {
                         title: 'SEO',
                         customClass: 'card-style-seo', 
-                        svgCode: '', 
+                        image: '/_nuxt/static/images/card_seo.svg', 
                         text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
                         // buttonText: 'More on SEO',
                         // buttonUrl: '/services/seo',
@@ -94,15 +94,15 @@ export default {
                     {
                         title: 'Hosting',
                         customClass: 'card-style-hosting',
-                        svgCode: '', 
+                        image: '/_nuxt/static/images/card_hosting.svg', 
                         text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
                         // buttonText: 'Hosting Plans',
                         // buttonUrl: '/services/hosting'
                     },
                     {
                         title: 'Entwicklung',
-                        customClass: 'card-style-entwicklung',
-                        svgCode: '', 
+                        customClass: 'card-style-dev',
+                        image: '/_nuxt/static/images/card_development.svg', 
                         text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text has been the.",
                         // buttonText: 'Our Process',
                         // buttonUrl: '/services/entwicklung'

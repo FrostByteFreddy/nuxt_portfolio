@@ -87,7 +87,7 @@ $colors: (
 
 // Containers
 $container-padding: 20px;
-$container-maxWidthDesktop: 1360px;
+$container-maxWidthDesktop: 1750px;
 $container-maxWidthMobile: calc(100vw - 2 * #{$container-padding});
 
 // Sections
@@ -127,8 +127,8 @@ $h2-fontFamily: $ff-main;
 
 // Heading 3
 $h3-color: $clr-white;
-$h3-fontSize: 1.875rem;
-$h3-fontWeight: bold;
+$h3-fontSize: 2.5rem;
+$h3-fontWeight: lighter;
 $h3-lineHeight: $headings-lineHeight;
 $h3-fontFamily: $ff-main;
 
@@ -159,7 +159,7 @@ $p-color: $clr-white;
  
 $p-fontSize: 1.15rem; // 16px
 $p-lineHeight: 1.5;
-$p-fontWeight: normal;
+$p-fontWeight: lighter;
 $p-fontFamily: $ff-main;
 $p-consecutiveMarginTop: 1rem; // p + p
 

@@ -10,6 +10,8 @@ p {
     margin: 0;
     font-size: variables.$p-fontSize;
     line-height: variables.$p-lineHeight;
+    font-weight: variables.$p-fontWeight;
+    color: variables.$p-color;
 
     & + p {
 

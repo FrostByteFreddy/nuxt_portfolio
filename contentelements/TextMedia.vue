@@ -1,5 +1,5 @@
 <template>
-    <div class="container" data-component="textmedia">
+    <div class="container">
         <div class="row g-5">
 
             <div class="col-md-6 col-12 align-center" v-if="imagePos === 'left'">

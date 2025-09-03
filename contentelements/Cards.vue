@@ -1,19 +1,24 @@
 <template>
-    <div class="container-narrow" data-component="cards">
-        <div class="row g-3" v-if="title || text">
+    <div class="container-narrow">
+        <div class="row g-5" v-if="title || text">
             <div class="col-12 text-center">
                 <h2 v-if="title" v-html="title" class="section-title"></h2>
-                <p v-if="text" v-html="text" class="section-text lead"></p>
+                <p v-if="text" v-html="text" class="section-text"></p>
             </div>
         </div>
+    </div>
 
-        <div class="row g-4">
-            <div v-for="(card, index) in cards" :key="index"
-                class="col-md-4 col-12">
+    <div class="container">
+        <div class="row g-4 mt-5">
+            <div v-for="(card, index) in cards" :key="index" class="col-md-4 col-12">
                 <div :class="['card', card.customClass]">
                     <div class="card-inner">
-                        <div v-if="card.svgCode" class="card-icon" v-html="card.svgCode"></div>
-                        <h5 v-if="card.title" class="card-title">{{ card.title }}</h5>
+                        <h3 v-if="card.title" class="card-title">{{ card.title }}</h3>
+                        <div v-if="card.image" class="image-wrapper">
+                            <img :src="card.image" alt="">
+                        </div>
+                    </div>
+                    <div class="card-description mt-5">
                         <p v-if="card.text" class="card-text">{{ card.text }}</p>
                         <a v-if="card.buttonText && card.buttonUrl" :href="card.buttonUrl"
                             :class="card.buttonClasses || 'btn btn-primary mt-auto'">

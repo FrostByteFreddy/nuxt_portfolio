@@ -1,8 +1,95 @@
+@use '../variables';
+
 [data-component="cards"] {
+
+    position: relative;
+    padding: 4rem 0;
+    padding-bottom: 3rem;
+
+    &::after,
+    &::before {
+
+        content: "";
+        position: absolute;
+        width: 200vw;
+
+        top: 2rem;
+        bottom: 2rem;
+        left: -50vw;
+        right: -50vw;
+
+        background: #2B2B2B;
+        opacity: .15;
+        z-index: -1;
+
+        transform: rotate(-177.5deg);
+    }
+
+    &::after {
+
+        transform: rotate(177.5deg);
+    }
 
     // default card
     .card {
 
-        
+        $gradient-angle: 137deg;
+        $border-radius: 1.5rem;
+        $padding: 2rem;
+
+        .card-inner {
+
+            border-radius: $border-radius;
+            padding: $padding;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            aspect-ratio: 1 / 1;
+
+            .card-title {
+
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .image-wrapper {
+
+                width: 100%;
+
+                img {
+
+                    display: block;
+                    width: 80%;
+                    margin: auto;
+                }
+            }
+        }
+
+        .card-description {
+
+            text-align: center;
+            color: variables.$clr-white;
+            font-weight: lighter;
+        }
+
+        &-style {
+
+            &-seo .card-inner {
+
+                background: linear-gradient(#{$gradient-angle}, rgba(255, 255, 255, 0.3) 0%, rgba(136, 136, 136, 0.15) 64%, rgba(0, 0, 0, 0) 100%);
+            }
+
+            &-hosting .card-inner {
+
+                background: linear-gradient(#{$gradient-angle}, rgba(variables.$gradient-color-2, 0.5) 0%, rgba(variables.$gradient-color-2, 0.15), 64%, rgba(0, 0, 0, 0) 100%);
+            }
+
+            &-dev .card-inner {
+
+                background: linear-gradient(#{$gradient-angle}, rgba(variables.$gradient-color-1, 0.5) 0%, rgba(variables.$gradient-color-1, 0.15) 64%, rgba(0, 0, 0, 0) 100%);
+            }
+        }
     }
 }
