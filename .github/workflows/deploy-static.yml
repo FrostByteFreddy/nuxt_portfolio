@@ -17,23 +17,26 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # 2. Set up the Node.js environment
+      # 2. Set up the Node.js environment (Cache disabled)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
 
-      # 3. Install project dependencies
+      # 3. Install project dependencies from scratch
       - name: Install Dependencies
-        run: |
-          npm i
+        run: npm install
+
+      # 4. Compile SCSS to CSS
+      - name: Compile SCSS
+        run: npx sass assets/scss/main.scss assets/compiled/main.css --style compressed
 
       - name: Check nuxt version
         run: npx nuxt --version
 
-      # 4. Generate the static site
+      # 5. Generate the static site using the project's script
       - name: Build Static Site
-        run: npm run generate
+        run: npm run generate # Use npm run for reliability
       
       # 5. Deploy to server using rsync over SSH
       - name: Deploy with Rsync
