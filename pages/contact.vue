@@ -8,7 +8,7 @@
 
 <script>
 
-import HeroSimple from '../ContentElements/Hero/HeroSimple.vue'
+import HeroSimple from '../contentelements/Hero/HeroSimple.vue'
 
 export default {
     components: {

@@ -44,9 +44,9 @@
 <script>
 // Import components
 import LayoutSection from '~/components/layout/Section.vue';
-import HeroSimple from '../ContentElements/Hero/HeroSimple.vue';
-import TextMedia from '../ContentElements/TextMedia.vue';
-import Cards from '../ContentElements/Cards.vue'; // Assuming your CardGrid component is named Cards.vue here
+import HeroSimple from '../contentelements/Hero/HeroSimple.vue';
+import TextMedia from '../contentelements/TextMedia.vue';
+import Cards from '../contentelements/Cards.vue'; // Assuming your CardGrid component is named Cards.vue here
 
 export default {
     name: 'App',
