@@ -27,8 +27,8 @@ jobs:
       # 3. Install project dependencies
       - name: Install Dependencies
         run: |
-          npm rebuild
           npm ci
+          npm rebuild
 
       - name: Check nuxt version
         run: npx nuxt --version
