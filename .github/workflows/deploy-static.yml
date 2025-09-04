@@ -27,10 +27,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # 4. Compile SCSS to CSS
-      - name: Compile SCSS
-        run: npx sass assets/scss/main.scss assets/compiled/main.css --style compressed
-
       # 5. Generate the static site using the project's script
       - name: Build Static Site
         run: npm run generate # Use npm run for reliability
