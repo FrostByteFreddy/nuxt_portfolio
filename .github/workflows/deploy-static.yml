@@ -35,7 +35,7 @@ jobs:
 
       # 4. Generate the static site
       - name: Build Static Site
-        run: npx nuxi generate
+        run: npm run generate
       
       # 5. Deploy to server using rsync over SSH
       - name: Deploy with Rsync
