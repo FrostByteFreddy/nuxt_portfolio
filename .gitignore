@@ -92,3 +92,4 @@ sw.*
 # Custom asets
 assets/compiled/
 .output
+package-lock.json
