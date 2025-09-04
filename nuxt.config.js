@@ -20,11 +20,6 @@ export default {
     ]
   },
 
-  // watch and render scss
-  css: [
-    '~/assets/scss/main.scss'
-  ],
-
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },
