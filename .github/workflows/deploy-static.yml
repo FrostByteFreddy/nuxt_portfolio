@@ -31,9 +31,6 @@ jobs:
       - name: Compile SCSS
         run: npx sass assets/scss/main.scss assets/compiled/main.css --style compressed
 
-      - name: Check nuxt version
-        run: npx nuxt --version
-
       # 5. Generate the static site using the project's script
       - name: Build Static Site
         run: npm run generate # Use npm run for reliability
