@@ -16,8 +16,6 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-import '~/assets/compiled/main.css';
-
 export default {
     components: {
         Navbar,

@@ -11,26 +11,26 @@ jobs:
   build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
+    environment: Production
 
     steps:
       # 1. Check out your repository's code
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # 2. Set up the Node.js environment
+      # 2. Set up the Node.js environment (Cache disabled)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-          cache: 'npm'
 
-      # 3. Install project dependencies
+      # 3. Install project dependencies from scratch
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
 
-      # 4. Generate the static site
+      # 5. Generate the static site using the project's script
       - name: Build Static Site
-        run: npx nuxi generate
+        run: npm run generate # Use npm run for reliability
       
       # 5. Deploy to server using rsync over SSH
       - name: Deploy with Rsync

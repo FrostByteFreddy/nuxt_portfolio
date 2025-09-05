@@ -1,7 +1,7 @@
 <template>
     <div data-device="mobile" :class="{ active: !isMenuHidden }">
         <a href="#" class="nav-logo">
-            <img class="nav-logo-img" src="/static/images/logo_example.svg" alt="SASS Logo">
+            <img class="nav-logo-img" src="/images/logo_example.svg" alt="SASS Logo">
         </a>
 
         <a id="burger-menu" @click="toggleMenu" role="button" :aria-expanded="isMenuHidden ? 'false' : 'true'" aria-controls="mobile-menu-list">
