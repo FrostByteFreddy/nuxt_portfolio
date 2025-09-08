@@ -10,6 +10,7 @@ header {
     // Desktop
     height: variables.$header-heightDesktopMaximized;
     width: 100%;
+    max-width: calc(100vw - #{variables.$container-padding} * 2);
     position: fixed;
     top: 0;
     z-index: 1000;

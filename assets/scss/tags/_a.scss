@@ -45,6 +45,14 @@ a {
             --btn-grad-stop2-pos: #{variables.$initial-grad-stop2-pos};
             --btn-grad-stop3-pos: #{variables.$initial-grad-stop3-pos};
 
+            border: .2rem solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(
+                    var(--btn-grad-angle),
+                    variables.$gradient-color-1 var(--btn-grad-stop1-pos),
+                    variables.$gradient-color-2 var(--btn-grad-stop2-pos),
+                    variables.$gradient-color-3 var(--btn-grad-stop3-pos));
+
             background: linear-gradient(
                     var(--btn-grad-angle),
                     variables.$gradient-color-1 var(--btn-grad-stop1-pos),

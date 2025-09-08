@@ -56,9 +56,13 @@ section {
 
         .col-12:has(img) {
 
-            position: relative;
-            display: flex;
-            justify-content: flex-end;
+            // only do this work desktop 
+            @include mixins.above('lg'){
+
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+            }
 
             // Image Background
             &::after {
