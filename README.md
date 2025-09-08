@@ -7,7 +7,7 @@ This is my personal portfolio, built with [Nuxt 3](https://nuxt.com/) and styled
 To run this project locally, follow these steps:
 
 1.  **Clone the repository:**
-    ```bash
+    ```bash 
     git clone https://github.com/FrostByteFreddy/nuxt_portfolio.git
     ```
 
