@@ -27,6 +27,10 @@
                 :imagePos="textMediaData.imagePos" />
         </LayoutSection>
 
+        <LayoutSection>
+            <ProjectSlider />
+        </LayoutSection>
+
         <LayoutSection
             :backgroundImage="cardGridData.backgroundImage"
             :additionalClasses="cardGridData.additionalClasses"
@@ -47,6 +51,7 @@ import LayoutSection from '~/components/layout/Section.vue';
 import HeroSimple from '../contentelements/Hero/HeroSimple.vue';
 import TextMedia from '../contentelements/TextMedia.vue';
 import Cards from '../contentelements/Cards.vue'; // Assuming your CardGrid component is named Cards.vue here
+import ProjectSlider from '~/components/ProjectSlider.vue';
 
 export default {
     name: 'App',
@@ -55,6 +60,7 @@ export default {
         HeroSimple,
         TextMedia,
         Cards,
+        ProjectSlider,
     },
     data() {
         return {

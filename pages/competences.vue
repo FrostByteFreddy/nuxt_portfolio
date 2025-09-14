@@ -5,6 +5,20 @@
         buttonText="Learn More" 
         buttonUrl="/about"
     />
+    <div class="competences-content">
+      <h2>My Skills</h2>
+      <ul>
+        <li>Vue.js</li>
+        <li>Nuxt.js</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>SCSS/SASS</li>
+        <li>Bootstrap</li>
+        <li>Wordpress</li>
+        <li>Typo3</li>
+        <li>CraftCMS</li>
+      </ul>
+    </div>
 </template>
 
 <script>
